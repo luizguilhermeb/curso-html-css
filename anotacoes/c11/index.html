@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 11</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Imagens Dinâmicas, Áudio e Video</h1>
+    <hr>
+    <h2>Imagens Dinâmicas</h2>
+    <picture>
+        <source media="(min-width: 1050px)" srcset="imagens/imagem-g.png" type="image/png">
+        <source media="(min-width: 750px)" srcset="imagens/imagem-m.png" type="image/png">
+        <img src="imagens/imagem-p.png" alt="Imagem Ilustrativa">
+    </picture>
+    <h2>Áudio</h2>
+    <h3>Menor compatibilidade (MP3)</h3>
+    <audio src="audios/audio-musical.mp3" preload="metadata" controls loop></audio>
+    <h3>Maior compatibilidade (MP3, OGG)</h3>
+    <audio preload="metadata" controls loop>
+        <source src="audios/audio-musical.mp3" type="audio/mpeg">
+        <source src="audios/audio-musical.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta Áudio <a href="audios/audio-musical.mp3" download type="audio/mpeg">Baixe-o</a></p>
+    </audio>
+    <h2>Video</h2>
+    <h3>Hospedado no próprio site</h3>
+    <video width="80%" poster="videos/sapo-na-chuva/sapo-na-chuva-thumb.png" controls>
+        <source src="videos/sapo-na-chuva/sapo-na-chuva.mp4" type="video/mp4">
+        <source src="videos/sapo-na-chuva/sapo-na-chuva.webm" type="video/webm">
+        <p>Seu navegador não conseguiu carregar o video</p>
+    </video>
+    <p><strong>NOTA</strong>: Use o <a href="https://handbrake.fr/downloads.php" target="_blank">Handbrake</a> para converter formatos de video. Os formatos mais suportados são <mark>MP4 e WEBM</mark></p>
+    <h3>Hospedado no Youtube</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HLvN5nmRh7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Para usar videos de outros sites use a opção <ins>incorporar</ins> para obter o código HTML.</p>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Tipografia</h1>
+
+        <h2>Quando surgiu?</h2>
+
+        <p>No século 15, os monges copistas trabalhavam copiando livros.</p>
+
+        <h2>Em 1450...</h2>
+
+        <p>O inventor alemão Gutenberg inventou a Prensa Mecânica de Tipos Móveis</p>
+
+        <h2>O que é tipografia?</h2>
+
+        <p>O estudo da escrita de letras no papel ou em telas.</p>
+
+        <h1>Anatomia do Tipo</h1>
+
+        <h2>Serifa</h2>
+
+        <img src="imagens/serifa.png" alt="Exemplo  de Serifa" type="image/png">
+
+        <p>A serifa cria uma linha imaginária no cérebro.</p>
+
+        <p>Por eexmplo você acabou de não pecreber que a palavra "exemplo" está errada, e também a palavra "perceber".</p>
+
+        <h2>Itens Métricos</h2>
+
+        <img src="imagens/anatomia-do-tipo.png" alt="Tabela da anatomia básica do Tipo" type="image/png">
+
+        <ul>
+            <li>Altura das maiúsculas.</li>
+            <li>Altura X: A letra x é a base de altura para todas as letras minúsculas.</li>
+            <li>Ascendente: Vazamento para cima de certas letras minúsculas.</li>
+            <li>Descendente: Vazamento para baixo de certas letras minúsculas</li>
+            <li>Corpo: Altura total para todas as letras.</li>
+        </ul>
+
+        <h2>Itens Anatômicos</h2>
+
+        <h3>Geométricos</h3>
+
+        <img src="imagens/anatomia-geometrica-do-tipo.png" alt="Tabela da anatomia geométrica do tipo" type="image/png">
+
+        <h3>Corporais</h3>
+
+        <img src="imagens/anatomia-corporal-do-tipo.png" alt="Tabela da anatomia corporal do tipo" type="image/png">
+
+        <h2>Definições Importantes</h2>
+
+        <dl>
+            <dt>Glifo</dt>
+            <dd>Qualquer letra dentro da fonte.</dd>
+
+            <br>
+
+            <dt>Fonte</dt>
+            <dd>O conjunto de todos os glifos.</dd>
+
+            <br>
+
+            <dt>Família Tipográfica</dt>
+            <dd>Variações da mesma fonte.</dd>
+        </dl>
+
+        <h2>Categorias de fontes</h2>
+
+        <img src="imagens/categorias-de-fontes.png" alt="Tabela de categorias de fontes" type="image/png">
+
+        <ul>
+            <li>As fontes sans-serif não contém serifa.</li>
+            <li>As monoespaçadas tem o mesmo espaço para cada glifo.</li>
+            <li>As handwriting ou Script, simulam uma caligrafia feita a mão.</li>
+            <li>As display não obedecem regras e são para um tom mais artístico ou estranho.</li>
+        </ul>
+
+        <h1>Estilo das Fontes</h1>
+
+        <h2>Estilos</h2>
+
+        <p>Usando a propriedade do css <code>font-style</code> podemos aplicar o itálico com o valor <code>italic</code>.</p>
+
+        <p style="font-style: italic;">Este texto está em itálico usando CSS.</p>
+
+        <p>Usando a propriedade do css <code>font-weight</code> podemos aplicar o negrito com o valor <code>bold</code>.</p>
+
+        <p style="font-weight: bold;">Este texto está em negrito usando CSS.</p>
+
+        <p>Há também algumas variações para o negrito, nessa ordem, <code>lighter</code>, <code>normal</code>, <code>bold</code>, <code>bolder</code>.</p>
+
+        <p>Também podem ser usados elementos numéricos que vão de <code>100</code>-<code>900</code></p>
+
+        <h2>Shorthand</h2>
+
+        <p>Todas as configurações de fonte podem ser resumidas em uma só linha:</p>
+
+<pre><code>p {
+    font: italic bold 1em Arial, helvetica, sans-serif;
+}</code></pre>
+
+        <p>A ordem dos atributos de uma shorthand em CSS é importante. No caso da
+        propriedade font, devemos informar, na ordem:</p>
+
+        <ul>
+            <li><code>font-style</code></li>
+            <li><code>font-variant</code></li>
+            <li><code>font-weight</code></li>
+            <li><code>font-size/line-height</code></li>
+            <li><code>font-family</code></li>
+        </ul>
+
+        <h1>Adicionais (CSS)</h2>
+        
+        <p>É possível aplicar configurações para uma ou mais tags:</p>
+
+        <pre><code>h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}</code></pre>
+
+
+        <h1>Fontes Baixadas</h1>
+
+        <h2>Colocar no site</h2>
+
+        <p style="font-family: 'Bebas Neue', sans-serif;">Para colocar uma fonte baixada no site basta usar esta linha de código:</p>
+
+        <pre><code>@font-face {
+    font-family: 'Bebas Neue';
+    src: url(fontes/bebas-neue-regular/bebas-neue-regular.ttf) format('truetype'), <br>url(fontes/bebas-neue-regular/bebas-neue-regular.otf) format('opentype');
+}</code></pre>
+
+        <h2>Uso do format()</h2>
+
+        <p>Tipos de format()<br>- opentype (otf)<br>- truetype (ttf)<br>- embedded opentype<br>- truetype aat (Apple Advanced Tipography)<br>- svg<br>- woff (Web Open Font Format)<br>- woff2 (Web Open Font Format 2)</p>
+
+        <h1>Text Indent</h1>
+
+        <p>Use o atributo <code>text-indent</code> do CSS para deixar os parágrafos com margem, quantifique isso em px.</p>
+    </main>
+</body>
+</html>

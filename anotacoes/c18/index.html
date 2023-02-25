@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 18</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>O que é Git e Github</h1>
+
+    <p>Git é um programa local que ajuda o programador a ter várias versões do projeto e voltar para qualquer versão anterior.</p>
+
+    <p>Github faz com que isso seja feito na nuvem, além de ser uma rede social de programadores em que se pode ajudar a desenvolver vários projetos.</p>
+
+    <p><strong>(Ao se instalar o Git, não esquecer de mudar o editor padrão para o vscode na edição Default)</strong></p>
+
+    <h1>.gitignore</h1>
+
+    <p>Para adicionar arquivos ao .gitignore e ignora-los em commits e pushs é necessário usar os seguintes padrões. <a href="https://www.atlassian.com/br/git/tutorials/saving-changes/gitignore" rel="external" target="_blank">Matéria usada</a></p>
+
+    <ul>
+        <h2>Localizar pastas</h2>
+        <li><ins>Inclua comentários com #</ins></li>
+        <li>/teste.txt <ins><em>Prefixar uma barra obriga a correspondência apenas com arquivos na origem do repositório.</em></ins></li>
+        <li>pasta_teste <ins><em>isso irá ignorar todas as pastas com o nome descrito.</em></ins></li>
+        <li>pasta_teste/arquivo_teste <ins><em>isso irá ignorar apenas o arquivo_teste que está dentro da pasta.</em></ins></li>
+        <li>logs/ <ins><em>Acrescentar uma barra indica que o padrão é um diretório.</em></ins></li>
+        <li>(ignorar foo[01].txt) foo\[01\].txt <ins><em>Para desconsiderar os caracteres do padrão .gitignore, você pode usar \ se tiver arquivos ou diretórios que os contenham.</em></ins></li>
+        <li>pasta/arquivo <ins><em>todo caminho que esteja no padrão ao lado irá começar no início, portanto uma pasta em um subdiretório mais abaixo não irá corresponder.</em></ins></li>
+    </ul>
+
+    <ul>
+        <h2>Localizar pastas **</h2>
+        <li>**/pasta_teste <ins><em>asteriscos duplos representam qualquer diretório, neste exemplo iram ser ignoradas todas as pastas em todos os diretórios que tiverem o nome pasta_teste.</em></ins></li>
+        <li>**/pasta_teste/arquivo_teste <ins><em>aqui irá ser ignorado o arquivo_teste.</em></ins></li>
+        <li>pasta/**/arquivo <em><ins>Um asterisco duplo corresponde a todos os diretórios dentro de pasta no exemplo.</ins></em></li>
+    </ul>
+
+    <ul>
+        <h2>Localizar pastas *</h2>
+        <li>*.log <ins><em>Um asterisco é um curinga que corresponde a zero ou mais caracteres, ou seja, qualquer coisa que tenha no final a extensão .log</em></ins></li>
+        <li>teste* <ins><em>Aqui se refere a qualquer arquivo que comece com teste, o asterisco representada qualquer coisa vinda depois.</em></ins></li>
+    </ul>
+
+    <ul>
+        <h2>!(excessão) e ?(caractere-curinga)</h2>
+        <li>!pasta1/pasta2/arquivo1 <ins><em>se coloca uma exclamação para dizer que tal arquivo não deve ser ignorado mesmo que esteja na lista .gitignore</em></ins></li>
+        <li>arquivo? <ins><em>Um ponto de interrogação corresponde exatamente a um caractere, como arquivo8 por exemplo</em></ins></li>
+    </ul>
+
+    <ul>
+        <h2>Caractere curinga (colchetes)</h2>
+        <li>arquivo[0-9].log <ins><em>colchetes que correspondem a apenas uma caractere dentro do intervalo.</em></ins></li>
+        <li>arquivo[246].log <ins><em>colchetes que correspondem a uma caractere dentro do conjunto(2 ou 4 ou 6). Mas não 24, pois colchetes correspondem a 1 caractere.</em></ins></li>
+        <li>arquivo[!123] <ins><em>qualquer caractere, com excessão de 1, 2 e 3. 12 não é uma excessão, pois colchetes correspondem a 1 caractere.</em></ins></li>
+        <li>arquivo[a-z].log <ins><em>o mesmo vale para letras</em></ins></li>
+    </ul>
+
+    <p>Você também pode definir padrões pessoais para um determinado repositório em um arquivo especial em .git/info/exclude. Esses arquivos não são atualizados nem distribuídos com seu repositório. Por exemplo, se você tiver uma configuração personalizada de .gitignore apenas para você, você pode preferir que sejam adicionadas ao .git/info/exclude para evitar um commit por acidente em seu repositório que afete a equipe.</p>
+</body>
+</html>

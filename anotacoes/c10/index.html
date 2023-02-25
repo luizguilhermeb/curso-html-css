@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 10</title>
+</head>
+<body>
+    <h1>HyperLinks</h1>
+    <hr>
+    <h2>Criar link</h2>
+    <a href="https://youtube.com">Youtube</a>
+    <h3>Links Vazios</h3>
+    <p>Para criar um link vazio coloque # dentro do href=""</p>
+    <h2>Uso do hreflang</h2>
+    <p>O uso do hreflang serve para mostrar ao navegador o idioma do site caso o usuário opte por traduzir os conteúdos.</p>
+    <a href="https://www.w3schools.com/html/" hreflang="en">Site w3schools (em inglês)</a>
+    <h2>Parâmetro target</h2>
+    <p>O parâmetro target suporta os seguintes valores:</p>
+    <pre>
+‣ _blank vai abrir um link em uma nova janela em branco(<a href="https://www.youtube.com/" target="_blank">Youtube</a>)
+‣ _self vai abrir o link na janela ou frame atual (padrão)(<a href="https://www.youtube.com/" target="_self">Youtube</a>)
+‣ _top vai desfazer todos os frames e abrir o destino no navegador completo(<a href="https://www.youtube.com/" target="_top">Youtube</a>)
+‣ _parent similar ao uso do _top em uma referência à janela mãe(<a href="https://www.youtube.com/" target="_parent">Youtube</a>)
+‣ nome-do-frame caso esteja usando frames, indicar o nome da janela a abrir.
+    </pre>
+    <h2>Indicar função do link</h2>
+    <pre>
+‣next indica que o link é para a próxima parte do documento atual <a href="pagina2.html" rel="next">Página 2</a>
+‣prev indica que o link é para a parte anterior do documento atual <a href="pagina2.html" rel="prev">Página 2</a>
+‣author indica que é um link para o site do autor do artigo atual<a href="pagina2.html" rel="author">Página 2</a>
+‣external indica que é um link para outro site que não faz parte do site atual<a href="pagina2.html" rel="external">Página 2</a>
+‣nofollow indica que é um link para um site não endossado, como um link pago <a href="pagina2.html" rel="">Página 2</a>
+    </pre>
+    <h2>Link de Download</h2>
+    <p>Basta fazer o link diretamente para o arquivo que se deseja efetuar o download e adicionar o atributo download com o valor configurado para o nome do arquivo a ser baixado e o atributo type para indicar ao navegador que tipo de arquivo está sendo baixado</p>
+    <ul>
+        <li><a href="arquivos/gato-no-sol.jpg" download type="image/jpeg">Imagem de Gato no Sol</a>
+        </li>
+        <li><a href="arquivos/sapo-na-chuva.mp4" download="sapo-molhado" type="video/mp4">Video de Sapo na Chuva</a></li>
+        <li><a href="arquivos/gato-no-sol.zip" download type="application/zip">Imagem Compactada</a></li>
+    </ul>
+    <p>Acesse este site para ver todos os media types de arquivos <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">iana</a></p>
+</body>
+</html>

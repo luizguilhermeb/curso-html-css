@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 02</title>
+</head>
+<body>
+    <h1>COMO A INTERNET FUNCIONA ?</h1>
+    <hr>
+    <h2>DADOS</h2>
+    <p>Os computadores só entendom 2 coisas, 0 e 1 (dois tipos de ondas de frequência).</p>
+    <p>Cada 0 e 1 recebe o nome de bit.</p>
+    <p>8 bits formam 1 byte, 1024 bytes formam 1 kilobyte, 1024 KB formam 1 megabyte, e assim por diante.</p>
+    <p>MB é usado para informar armazenamento.</p>
+    <p>Mb é usado para informar transmissão de dados.</p>
+    <h2>TRANSPORTE DE DADOS</h2>
+    <p>Todos esses bits são transportados principalmente através de cabos de fibra óptica. <a href="https://www.submarinecablemap.com/" target="_blank">Veja este Site</a>.</p>
+    <p>Ao contrário do que muitos pensam os satélites ainda perdem para os cabos, e não são tão usados quanto.</p>
+    <p>Para esses cabos se interligarem com sua casa é preciso se conectar com outros tipos de sistemas; como os de telefonia e tv.</p>
+    <p>No entanto, tais sistemas tem tipos diferente de ondas. É feita uma conversão, ou modulação de uma onde analógica para uma digital por exemplo.</p>
+    <p>O aparelho que faz isso contém um modem que faz isso. O nome modem vem da função dele; MOdular e DEModular (MODEM). Porém o nome do aparelho completo é Gateway.</p>
+    <p>Geralmente os algoritmos de rede irão decidir qual a melhor rota a se fazer através dos cabos, assim como o gps escolhe o melhor caminho para chegar em algum lugar dependendo de engarrafamentos.
+    </p>
+    <h2>CLIENT-SERVER</h2>
+    <p>O seu dispositivo, seja um celular ou computador é chamado de cliente. Os grande computadores que armazenam os sites, são chamados de servidores.</p>
+    <p>A Internet funciona por causa de 2 protocolos, o conjunto tcp/ip.
+    Umas das funções do TCP/IP é indentificar nós.</p>
+    <p>Um nó é cada ponto que está conectado à rede. Quando você “se conecta” à Internet, recebe uma identificação única. Essa identificação é um ENDEREÇO IP.</p>
+    <p>Basicamente, as versão antiga e ainda usada do IP é o IPV4, que contém 32 bits (ex:123.45.67.89). A versão mais moderna é o IPV6 que contém 128 bits.</p>
+    <p>Cada site tem um nome que mascara o ip do servidor dele.Esse nome fica guardado em uma grande tabela DNS (Domain Name System).</p>
+    <h2>POR QUE OS SITES APARECEM AOS POUCOS?</h2>
+    <p>É enviado primeiro o arquivo HTML do site, e após são requisitadas a imagens e arquivos restantes.</p>
+    <p>Qualquer arquivo em pacote é enviado em pedacinhos através dos cabos.</p>
+    <h2>NOME DO SITE</h2>
+    <p>O nome que o usuário compra para seu site é chamado de Domínio; ex: youtube.com, twich.tv.O nome que vem depois do "." é chamado de TLD (top level Domain).</p>
+    <p>Existem os gTLDS, que são usados para fim genérico ou comercial, ex: (.com, .net, .online). Existem os ccTLDS, que são usados para fim nacional geralmente, ex: (.br, .ru, .us) .</p>
+    <p>O nome que vem antes do Domínio, é chamado de sub-domínio, ex: www.google.com.br, images.google.com.br .</p>
+    <p>Já o que vem antes do sub-domínio é o protocolo ultilizado na rede.Na maioria das vezes é o protocolo http e https. A diferença é que o https contém segurança SSL, pois os arquivos são enviados de forma criptografada.</p>
+    <h2>HOSPEDAGEM</h2>
+    <p>A hospedagem é o servidor onde você vai manter todos os aquivos do seu site. Para isso é preciso pagar um plano, seja ele mensal ou anual</p>
+    <h2>COMO FUNCIONA O HTTP</h2>
+    <p>O protocolo http envolve a comunicação feita entre o cliente e o servidor onde o site está hospedado.</p>
+    <p>Primeiro o cliente faz uma http request, pedindo os dados do site, o servidor faz uma http response, enviando-os</p>
+    <p>Quando se faz qualquer coisa no site, um método está sendo executado através.</p>
+    <h3>Alguns exemplos:</h3>
+    <p>GET - pegar arquivos do site, como um vídeo<br>POST - postar algo no site, como uma foto<br>PUT - alterar algo no site, como um nome de usuário<br>DELETE - Deletar algo no site, como um comentário</p>
+    <h3>Códigos do https:</h3>
+    <p>200 - OK<br>201 - Created (Algo foi postado)<br>404 - Not Found (Não Existe)<br>403 - Forbidden (Sem acesso)<br>401 - Unauthorized (Sem autorização)<br>500 - Internal Server Error (Erro)<br></p>
+</body>
+</html>

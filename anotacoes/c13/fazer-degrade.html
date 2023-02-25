@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer degradê no site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="index.html" rel="prev"><img src="icones/botao-voltar.png" alt="Voltar a página principal" type="image/png"></a>
+
+    <p>Para fazer um degradê é preciso usar a atribuição:</p>
+
+    <code>background-image: linear-gradient(direção, cor1, cor2);</code>
+
+    <p>Um exemplo real é o usado neste site que foi:</p>
+
+    <code>background-image: linear-gradient(to right, #3400DB, #0010DB);</code>
+
+    <p>Para colocar o degradê em direções diferentes bastar usar:</p>
+
+    <ul style="background-color: rgb(41, 41, 41);
+    color: rgb(158, 157, 157);">
+        <li>direção: to right (para direita)</li>
+        <li>direção: to left (para esquerda)</li>
+        <li>direção: to top (para cima)</li>
+        <li>direção: to bottom (para baixo)</li>
+    </ul>
+
+    <p>Caso o site fique zebrado ao colocar "to top" e "to bottom", use este código que eixa o degradê fixo no fundo.</p>
+
+    <code>background-attachment: fixed;</code>
+</body>
+</html>

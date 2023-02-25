@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <hr>
+    <h2>Código Fonte (Qualquer linguagem)</h2>
+    <pre>
+        <code>
+from random import randint
+
+print(f'\033[1;35;42m{"SORTEADOR":^40}\033[m\n{"(maior e menor entre 5 números)":^40}')
+input('Aperte ENTER:')
+valores = randint(1, 5), randint(1, 5), randint(1, 5), randint(1, 5), randint(1, 5)
+print('\nVALORES -> ', end='')
+for valor in valores:
+    print(valor, end=' ')
+print(f'MAIOR: {max(valores)}\nMENOR: {min(valores)}')
+        </code>
+    </pre>
+    <h2>Citações</h2>
+    <p>Segundo o pai de um amigo: <q>O computador é um burro muito rápido</q></p>
+    <p>Segundo Maurício Samy Silva:</p>
+    <blockquote cite="https://www.google.com.br/books/edition/HTML5_2%C2%AA_Edi%C3%A7%C3%A3o/f7JVBQAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover">
+        A web foi inventada em 1992 por Sir Tim Berners-Lee. Atualmente Tim é diretor do World Wide Web Consortium (W3C)...
+    </blockquote>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language ">HTML</abbr> e <abbr title="Cascating Style Sheets">CSS</abbr></p>
+    <h2>Texto Invertido</h2>
+    <bdo dir="rtl">Sei lá mano</bdo>
+</body>
+</html>

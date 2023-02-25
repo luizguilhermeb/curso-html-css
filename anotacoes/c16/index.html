@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Modelo de Caixas</h1>
+
+    <h2>Anatomia de uma caixa</h2>
+
+    <img src="imagens/anatomia-da-caixa.png" alt="Anatomia de uma caixa" type="'img/png">
+
+    <p>Tudo começa a partir do <strong>conteúdo</strong> (content), que representamos acima com o bla bla bla… Por padrão, toda caixa é composta apenas pelo conteúdo e não possui padding, nem border, nem outline e nem margin. Uma exceção curiosa é o elemento <body> que já vem com uma margin de 8px.</p>
+    
+    <p>Todo conteúdo possui uma <strong>largura</strong> (width) e uma <strong>altura</strong> (height) e a esse conjunto de propriedades, damos o nome de box-size (tamanho da caixa). O tamanho da caixa não inclui as medidas de padding, border, outline e margin.</p>
+
+    <p>Depois do conteúdo e de seu tamanho, vamos nos focar na <strong>borda</strong> que fica em volta dele. Ela pode ter uma espessura, uma cor e um formato.</p>
+
+    <p>Entre a borda e o conteúdo - da borda para dentro - temos o <strong>preenchimento</strong> (padding) e da borda para fora, temos a <strong>margem</strong> (margin).</p>
+
+    <p>Entre a margem e a borda, podemos determinar o <strong>contorno</strong> (outline) que é muito pouco utilizado, mas existe. Ele é um traçado visual que podemos criar fora da borda e o cálculo da sua espessura faz parte da margem estabelecida.</p>
+
+    <h2>Tipos de Caixa</h2>
+
+    <img src="imagens/tipos-de-caixa.png" alt="Tipos de caixa" type="'img/png">
+
+    <p>Basicamente caixas <strong>box-level</strong> ocupam 100% da widht de um site, além de sempre quebrar a linha quando colocadas.</p>
+
+    <p>As caixas <strong>inline-level</strong> fazem o contrário, continuam em linha e ocupam o espaço que detém da primeira a última caractere.</p>
+
+    <h2>User Agent</h2>
+
+    <p>User agente é sempre usado para representar configurações feitas pelo navegador.</p>
+
+    <h2>Exemplos de caixa</h2>
+
+    <h3>box-level</h3>
+
+    <p class="paragrafo-em-caixa">Olá 1</p>
+
+    <p class="paragrafo-em-caixa">Olá 2</p>
+
+    <h3>inline-level</h3>
+
+    <a class="link-em-caixa" href="https://youtube.com" target="_blank" rel="external">link 1</a>
+
+    <a class="link-em-caixa" href="https://youtube.com" target="_blank" rel="external">link 2</a>
+
+    <h2>Shorthands</h2>
+
+    <h3>border e outline</h3>
+
+    <img src="imagens/shorthand-border-outline.png" alt="shorthand para border e outline">
+
+    <h3>padding e margin</h3>
+
+    <img src="imagens/shorthand-padding-margin.png" alt="shorthand para padding e margin">
+
+    <p>Há também a opção configurar apenas os lados de cima e baixo.</p>
+
+    <img src="imagens/shorthand-padding-margin-minimal.png" alt="shorthand padding e margin menor.">
+
+    <h3>auto</h3>
+
+    <p>Também é possível fazer uma config. que deixe um elemento centralizado, por exemplo use: <span class="codigo"><code>margin: auto;</code></span>.
+    </p>
+
+    <h2>Grouping Tags</h2>
+
+    <img src="imagens/grouping-tags.png" alt="Grouping Tags">
+
+    <h3>Header</h3>
+
+    <p>Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos &lt;h1&gt; - &lt;h6&gt; e subtítulos. Podem também conter menus de navegação.</p>
+
+    <h3>Nav</h3>
+
+    <p>Define uma área que possui os links de navegação pela estrutura de páginas que vão compor o website. Um &lt;nav&gt; pode estar dentro de um &lt;header&gt;.</p>
+
+    <h3>Main</h3>
+
+    <p>É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.</p>
+
+    <h3>Section</h3>
+
+    <p>Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos. Segundo a documentação oficial da W3C, “uma seção é um agrupamento temático de conteúdos, tipicamente com um cabeçalho”.</p>
+
+    <h3>Article</h3>
+
+    <p>Um artigo é um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Podemos usar um &lt;article&gt; para delimitar um post de blog ou fórum, uma notícia, etc.</p>
+
+    <h3>Aside</h3>
+
+    <p>Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente um conteúdo &lt;aside&gt; está posicionado ao lado de um determinado texto ou até mesmo no meio dele, exatamente como fizemos no bloco de texto apresentado anteriormente, falando sobre “MÚLTIPLOS NÍVEIS”.</p>
+
+    <h3>Footer</h3>
+
+    <p>Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico (o que caracterizaria um &lt;aside&gt;), mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.</p>
+
+    <h1 id="teste-de-borda">Teste de borda</h1>
+
+    <h2>Código usado para o título acima</h2>
+
+    <pre class="codigo"><code>#teste-de-borda {
+    border: 10px solid;
+    padding: 10px;
+    border-image-source: url(borda.png);
+    border-image-slice: 27;
+    border-image-repeat: space stretch;
+}</code></pre>
+</body>
+</html>

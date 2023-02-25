@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-image: linear-gradient(to bottom, #5f9be6, #1675EA);
+    background-attachment: fixed;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 15px #0b4285;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #7e75e7;
+}
+
+h2 {
+    color: #EB752D;
+}
+
+#subtitulo-id-e-class {
+    color: #3121EB;
+}
+
+p {
+    text-align: justify;
+}
+
+#paragrafo-inicial {
+    color: #09E5EB;
+}
+
+#paragrafo-importante > #texto-secreto {
+    display: none;
+}
+
+#paragrafo-importante:hover > #texto-secreto {
+    display: block;
+}
+
+#paragrafo-clicavel:active {
+    background-color: purple;
+}
+
+#texto-secreto {
+    background-color: yellow;
+}
+
+.paragrafo-explicativo {
+    color: #3121EB;
+}
+
+.importante {
+    background-color: purple;
+    font-weight: bold;
+}
+
+div {
+    background-color: rgb(189, 187, 187);
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+div:hover {
+    color: white;
+    background-color: rgb(58, 57, 57);
+}
+
+a {
+    display: inline-block;
+    color: rgb(255, 136, 0);
+    background-color: rgb(0, 60, 255);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: rgb(255, 30, 0);
+}
+
+.special-link {
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+}
+
+.special-link:hover {
+    text-decoration: none;
+}
+
+.special-link:visited {
+    color: gray;
+}
+
+.special-link::before {
+    content: '»';
+}
+
+.special-link::after {
+    content: '«';
+}
+
+#special-div {
+    color: black;
+    font-weight: bold;
+    background-color: yellow;
+}

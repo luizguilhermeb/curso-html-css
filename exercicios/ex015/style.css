@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+body{
+    background-color: #FAFAD2;
+    font-size: 15pt;
+}
+
+h1{
+    background-color: #DAA520;
+    color: #800000;
+    font-family: Arial;
+    text-decoration: underline;
+}
+
+h2{
+    color: #800000;
+    font-family: Arial;
+}
+
+p{
+    font-family: Arial;
+}
+
+a{
+    font-family: Arial;
+}

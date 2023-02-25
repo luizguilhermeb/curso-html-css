@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 17</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Arquivos do Capítulo</h1>
+
+    <a href="arquivos/primeiro-mini-projeto.pdf">PDF com as instruções do curso</a>
+
+    <br>
+
+    <a href="d010/desafio-10.html">Desafio prático concluído</a>
+
+    <h1>Pontos a se ressaltar</h1>
+
+    <h2>Video do Youtube Responsivo</h2>
+
+    <p>Para fazer um <code>&lt;iframe&gt;</code> responsivo é necessário entender os seguintes conceitos:</p>
+
+    <ul>
+        <li><code>position</code>: <code>relative</code> e <code>absolute</code></li>
+        <li>Uso de porcentagem em atributos de caixa; ex - <code>padding: 50%;</code></li>
+    </ul>
+
+    <h3>Position</h3>
+
+    <p>Um elemento pode ter position <code>absolute</code> ou <code>relative</code>, sendo que seu elemento padrão é <code>static</code>.</p>
+
+    <div id="caixa-absolute">Caixa2</div>
+
+    <p>Quando se coloca <code>absolute</code> ou <code>relative</code>, 4 novos atributos são desbloqueados para uso, (<code>top</code>, <code>bottom</code>, <code>right</code>, <code>left</code>).</p>
+
+    <p>Um elemento com position <code>relative</code> tem sua posição em relacão a ele mesmo.</p>
+
+    <p>Já um elemento <code>absolute</code> tem sua posição em relação ao primeiro elemento pai com atributo <code>absolute</code>, <code>relative</code>, <code>fixed</code> e <code>sticky</code>.</p>
+
+    <p>A caixa no topo da página tem o seguinte código:</p>
+
+    <pre><code>#caixa-absolute {
+    background-color: aqua;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}</code></pre>
+
+    <h3>Uso de porcentagem</h3>
+
+    <p>Para entender o uso de porcentagem:</p>
+
+    <ul>
+        <li>Verifique a documentação para cada propriedade CSS que usa valores em porcentagem.</li>
+
+        <li>Compreenda o contexto em que a porcentagem está sendo usada (por exemplo, em relação ao elemento pai ou ao próprio elemento).</li>
+
+        <li>Conheça as limitações de cada propriedade CSS em relação ao uso de valores em porcentagem.</li>
+    </ul>
+
+</body>
+</html>
