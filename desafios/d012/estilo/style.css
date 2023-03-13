@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+:root {
+    --fonte-generica: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-padrao: 'Signika Negative', sans-serif;
+    --fonte-conteudo: 'Pangolin', cursive;
+}
+
+body {
+    margin: 0;
+    background-color: lightgray;
+    font-family: var(--fonte-generica);
+}
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--fonte-padrao);
+}
+
+#titulo-principal {
+    margin: 0;
+    padding-top: 45px;
+    font-size: 3em;
+}
+
+header > p {
+    font-size: 1.2em;
+    padding-bottom: 45px;
+    margin: 0;
+}
+
+main {
+    font: italic 1.5em var(--fonte-conteudo);
+    line-height: 50px;
+}
+
+section {
+    padding: 10vh 10px;
+}
+
+.imagem {
+    background-color: rgb(77, 77, 77);
+    color: white;
+}
+
+.imagem > p {
+    background-color: rgba(0, 0, 0, 0.400);
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.normal {
+    background-color: white;
+}
+
+footer {
+    font:1.1em var(--fonte-padrao);
+    padding: 7px;
+    margin-bottom: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer > p {
+    margin: 0;
+}
+
+footer > p > a {
+    display: inline-block;
+}
