@@ -52,7 +52,7 @@ main {
 }
 
 section {
-    padding: 70px 10px;
+    padding: 10vh 10px;
 }
 
 section > p {
@@ -79,14 +79,12 @@ section > p {
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 #fundo-imagem-carta {
     background-image: url(../imagens/background002.jpg);
     background-position: left bottom;
     background-attachment: fixed;
-    background-size: cover;
 }
 
 .normal {
