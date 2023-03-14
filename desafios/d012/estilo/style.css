@@ -78,13 +78,13 @@ section > p {
 #fundo-imagem-joaninha {
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
-    background-attachment: fixed;
+    background-size: cover;
 }
 
 #fundo-imagem-carta {
     background-image: url(../imagens/background002.jpg);
     background-position: left bottom;
-    background-attachment: fixed;
+    background-size: cover;
 }
 
 .normal {
