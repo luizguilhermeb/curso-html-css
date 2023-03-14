@@ -80,12 +80,14 @@ section > p {
     background-image: url(../imagens/background001.jpg);
     background-position: right center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 #fundo-imagem-carta {
     background-image: url(../imagens/background002.jpg);
     background-position: left bottom;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .normal {
