@@ -10,15 +10,10 @@
     --fonte-conteudo: 'Pangolin', cursive;
 }
 
-html {
-    height: -webkit-fill-available;
-}
-
 body {
     margin: 0;
     background-color: lightgray;
     font-family: var(--fonte-generica);
-    height: -webkit-fill-available;
 }
 
 a {
