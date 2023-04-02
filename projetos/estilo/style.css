@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Shadows+Into+Light&display=swap');
 
 :root {
     --cor0: #D9B07E;
@@ -8,8 +8,9 @@
     --cor2: #F2790F;
     --cor3: #A63F03;
     --cor4: #59210C;
+    --cor5: white;
 
-    --fonte-chamativa: 'Berkshire Swash', cursive;
+    --fonte-chamativa: 'Shadows Into Light', cursive;
     --fonte-destaque:'PT Serif', serif;
     --fonte-normal: 'Karla', sans-serif;
     --fonte-reserva: Arial, Helvetica, sans-serif;
@@ -21,24 +22,38 @@
 }
 
 body {
-    margin: 0;
-    background-color: var(--cor0);
-    font-family: var(--fonte-normal);
+    font-family: var(--fonte-normal), var(--fonte-reserva);
+}
+
+article {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 7vh 0;
+    color: var(--cor3);
 }
 
 h1, h2 {
     font-family: var(--fonte-destaque);
 }
 
+p, div {
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
 header {
-     background-image: url(../imagens/fundo-cafe.jpg);
-     background-position: center;
-     background-size: cover;
-     height: 98vh;
+    background: url(../imagens/fundos/fundo-cafe.jpg) center / cover;
+     height: 99vh;
 }
 
 nav {
-    background-color: white;
+    background-color: var(--cor5);
     text-align: center;
 }
 
@@ -53,11 +68,11 @@ nav {
     bottom: 25px;
 }
 
-.menu-redes-sociais {
+#menu-instagram {
     position: relative;
-    bottom: 8px;
+    bottom: 10px;
 
-    margin: 0px 7px;
+    margin: 0px 10px;
     width: 40px;
     border-radius: 5px;
 }
@@ -74,23 +89,92 @@ nav > ul > a:hover {
 }
 
 #link-atrativo {
-    color: white;
     background-color: var(--cor2);
+    color: var(--cor5);
     padding: 10px 40px;
     border: 2px solid var(--cor1);
     border-radius: 10px;
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px var(--cor1);
+    text-shadow: 0px 0px 3px var(--cor1);
     text-decoration: none;
     font-size: 1.4em;
-    font-family: var(--fonte-destaque);
-    box-shadow: 0px 0px 5px var(--cor1);
 
     position: absolute;
     top: 65%;
-    left: 2%;
+    left: 5%;
+    transition: 0.5s;
+}
+
+#link-atrativo:hover {
+    left: 5.5%;
 }
 
 main {
-    background-color: white;
-    text-align: center;
+    background-color: var(--cor5);
+}
+
+.artigo-link {
+    text-decoration: none;
+    background-color: var(--cor3);
+    color: var(--cor5);
+    font-size: 1.2em;
+    border: 1px solid var(--cor3);
+
+    display: inline-block;
+    margin: 3vh 0px;
+    padding: 5px 15px;
+    transition: 0.1s;
+}
+
+.artigo-link:hover {
+    background-color: var(--cor5);
+    color: var(--cor3);
+    border: 1px solid var(--cor3);
+}
+
+#cardapio {
+    max-width: none;
+    width: 100%;
+    background-color: var(--cor3);
+}
+
+#cardapio > h1 {
+    color: var(--cor5);
+    padding-top: 5vh;
+}
+
+.cardapio-produto {
+    display: inline-block;
+}
+
+.cardapio-produto > img {
+    max-width: 90%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardapio-produto > p {
+    color: var(--cor3);
+    background-color: var(--cor5);
+    border-radius: 0px 0px 10px 10px;
+
+    font-size: 1.3em;
+    font-weight: bold;
+    width: 90%;
+    margin: -10px auto 10px auto;
+    transition: 0.3s;
+}
+
+.cardapio-produto:hover > p{
+    background-color: var(--cor4);
+    color: var(--cor5);
+    font-size: 1.5em;
+}
+
+#cardapio > section > a {
+    background-color: var(--cor2);
+    color: var(--cor5);
+}
+
+#cardapio > section > a:hover {
+    background-color: var(--cor4);
 }
