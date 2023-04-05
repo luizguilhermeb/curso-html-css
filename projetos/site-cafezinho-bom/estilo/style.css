@@ -10,6 +10,7 @@
     --cor4: #59210C;
     --cor5: white;
     --cor6: #EFEFEF;
+    --cor7: #a7a7a7;
 
     --fonte-chamativa: 'Shadows Into Light', cursive;
     --fonte-destaque:'PT Serif', serif;
@@ -191,6 +192,10 @@ main {
 }
 
 .avaliacoes {
+    position: relative;
+    bottom: 1px;
+    transition: 0.5s;
+
     display: inline-block;
     max-width: 270px;
     width: 95%;
@@ -200,6 +205,10 @@ main {
     background-color: var(--cor6);
     border-radius: 5px;
     text-align: left;
+}
+
+.avaliacoes:hover {
+    bottom: 11px;
 }
 
 .avaliacoes-perfil {
@@ -215,6 +224,27 @@ main {
     font-weight: bold;
 }
 
+.avaliacoes-verificado{
+    position: relative;
+    left: 1px;
+    bottom: 3px;
+    width: 8%;
+}
+
+.avaliacoes-data {
+    font-size: 0.8em;
+    color: var(--cor7);
+    padding: 45px 0px 0px 2px;
+}
+
 .avaliacoes-descricao {
     font-size: 1em;
+}
+
+footer {
+    background-color: var(--cor4);
+}
+
+footer > h1 {
+    color: var(--cor5);
 }
