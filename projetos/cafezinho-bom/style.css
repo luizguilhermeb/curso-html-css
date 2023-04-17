@@ -83,7 +83,7 @@ header > h1 {
 
 header > a {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s;
