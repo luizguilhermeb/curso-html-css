@@ -297,7 +297,7 @@ footer > h1::after {
     color: var(--cor5);
     display: inline-block;
     vertical-align: top;
-    margin: 0px 5vw;
+    margin: 0px 5vw 30px 5vw;
 }
 
 .sections-fale-conosco > h2 {
@@ -306,6 +306,14 @@ footer > h1::after {
 
 .sections-fale-conosco > p {
     color: var(--cor1);
+}
+
+#sem-margem {
+    margin-bottom: 0px;
+}
+
+#margem-acima {
+    margin-top: 20px;
 }
 
 .redes-sociais {
