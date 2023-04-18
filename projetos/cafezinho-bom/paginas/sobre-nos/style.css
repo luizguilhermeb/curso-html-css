@@ -140,6 +140,14 @@ footer > h1::after {
     filter: brightness(0%) invert(100%);
 }
 
+#sem-margem {
+    margin-bottom: 0px;
+}
+
+#margem-acima {
+    margin-top: 20px;
+}
+
 #container-endereco {
     padding: 50px 0px;
 }
@@ -150,5 +158,6 @@ footer > h1::after {
     max-width: 800px;
     height: 300px;
     margin: auto;
+    padding-top: 50px;
     border-radius: 10px;
 }
