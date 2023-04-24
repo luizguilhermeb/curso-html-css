@@ -5,6 +5,7 @@ body {
 }
 
 table {
+    position: relative;
     border-collapse: collapse;
     width: 500px;
 }
@@ -21,11 +22,22 @@ thead, tfoot {
     color: white;
 }
 
+thead > tr {
+    position: sticky;
+    background-color: lightslategray;
+    top: -1px;
+}
+
+tbody > tr:nth-child(odd) { /*nth significa um número ordinal que defina um elemento filho de um elemento pai, onde "n" é um valor inteiro e "th" é um sufixo para números ordinais*/
+    background-color: lightblue;
+}
+
 td, th {
     border: 1px solid black;
     padding: 10px;
 }
 
 .num {
+    width: 50px;
     text-align: right;
 }

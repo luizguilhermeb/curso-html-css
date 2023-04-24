@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 1000px;
+}
+
+table {
+    position: relative;
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+}
+
+caption {
+    position: sticky;
+    top: -1px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
