@@ -6,8 +6,14 @@ body {
 }
 
 iframe {
-    display: block;
+    display: inline-block;
     margin: 20px;
     width: 350px;
     height: 600px;
+}
+
+.iframe-de-navegacao {
+    border: 1px solid black;
+    width: 95%;
+    height: 300px;
 }
