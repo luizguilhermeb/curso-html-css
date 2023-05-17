@@ -51,6 +51,7 @@ body {
 }
 
 .logo {
+    box-sizing: border-box;
     position: relative;
     bottom: 0;
     right: 0;
@@ -65,5 +66,5 @@ body {
 .logo:hover {
     bottom: 2px;
     right: 2px;
-    box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 10px;;
+    box-shadow: rgba(0, 0, 0, 0.5) 4px 4px 10px;
 }
