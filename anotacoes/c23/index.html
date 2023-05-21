@@ -120,5 +120,29 @@
             <input type="reset" value="Limpar">
         </div>
     </form>
+
+    <h1>Color, range e file em HTML</h1>
+
+    <form action="cadastro.php" method="post">
+
+        <div>
+            <label for="id-satisfacao">Satisfação:</label>
+            <input type="range" name="satisfacao" id="id-satisfacao" min="1" max="5">
+        </div>
+
+        <div>
+            <label for="id-cor">Cor:</label>
+            <input type="color" name="cor" id="id-cor">
+        </div>
+
+        <div>
+            <input type="file" name="arquivo" id="id-arquivo">
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
 </body>
 </html>
