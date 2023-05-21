@@ -69,5 +69,56 @@
             <input type="reset" value="Limpar">
         </div>
     </form>
+
+    <h1>Formulário com email e telefone</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <div>
+                <label for="id-email">Email</label>
+                <input type="email" name="email" id="id-email" required autocomplete="email">
+            </div>
+            <div>
+                <label for="id-telefone">Telefone</label>
+                <input type="tel" name="telefone" id="id-telefone" required autocomplete="tel" pattern="^(?:\+55)?(?:9)?\d{4}-\d{4}$" placeholder="x xxxx-xxxx">
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <h1>Checkbox e Radio Bottom</h1>
+
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="id-sexo-m"> <label for="id-sexo-m">Masculino</label>
+            <input type="radio" name="sexo" id="id-sexo-f"> <label for="id-sexo-f">Feminino</label>
+        </fieldset>
+
+        <!--
+            
+            
+        INPUT DO TIPO RADIO TEM QUE TER O MESMO NAME PARA FUNCIONAR
+        
+
+        -->
+
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="futebol" id="id-futebol"> <label for="id-futebol">Futebol</label> <br>
+            <input type="checkbox" name="basquete" id="id-basquete"> <label for="id-basquete">Basquete</label> <br>
+            <input type="checkbox" name="golfe" id="id-golfe"> <label for="id-golfe">Golfe</label> <br>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
 </body>
 </html>
