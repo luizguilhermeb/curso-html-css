@@ -144,5 +144,130 @@
             <input type="reset" value="Limpar">
         </div>
     </form>
+
+    <h1>Select, datalist e textarea em HTML</h1>
+
+    <form action="cadastro.php" method="get">
+
+        <div>
+            <label for="id-estado">Estado</label>
+
+            <select name="estado" id="id-estado">
+
+                <option value="" selected>--- Escolha ---</option>
+
+                <optgroup label="Suldeste">
+                    <option value="sp">São Paulo</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="rj">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Norte">
+                    <option value="ac">Acre</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="pa">Pará</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="to">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="Nordeste">
+                    <option value="al">Alagoas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="se">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="Centro-Oeste">
+                    <option value="go">Goiás</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="df">Distrito Federal</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="pr">Paraná</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="sc">Santa Catarina</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="id-profissao">Profissão</label>
+            <input type="text" name="profissao" id="id-profissao" list="lista-profissao">
+            <datalist id="lista-profissao">
+                <option>Professor</option>
+                <option>Programador</option>
+                <option>Administrador</option>
+                <option>Advogado</option>
+            </datalist>
+        </div>
+
+        <div>
+            <label for="id-descricao">Descrição</label>
+            <textarea name="descricao" id="id-descricao" cols="30" rows="10" style="resize: none;" placeholder="Digite sua descrição"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <h1>Elemento output em formulários HTML</h1>
+
+    <form action="cadastro.php" method="get">
+
+        <div>
+            <label for="id-n1">Número 1:</label>
+            <input type="number" name="numero" id="idn1" min="0" max="50" required oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)">
+        </div>
+
+        <div>
+            <label for="id-n2">Número 2:</label>
+            <input type="number" name="numero" id="idn2" min="0" max="50" required oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)">
+        </div>
+
+        <div>
+            <label for="idsoma">Soma: </label>
+            <output name="soma" id="idsoma">0</output>
+        </div>
+
+        <div>
+            <label for="idfaixa">Faixa: </label>
+            <input type="range" name="faixa" id="idfaixa" min="1" max="5" oninput="faixanumero.innerHTML = Number(idfaixa.value)">
+            <output id="faixanumero">3</output>
+        </div>
+
+        <div>
+            <label for="idano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="idano" min="1900" max="2023" oninput="calcIdade()">
+        </div>
+
+        <div>
+            <label for="ididade">Sua idade é:</label>
+            <output id="ididade">0</output>
+        </div>
+
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </div>
+    </form>
+
+    <script>
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            ididade.innerHTML = Number(atual) - Number(idano.value)
+        }
+    </script>
 </body>
 </html>
