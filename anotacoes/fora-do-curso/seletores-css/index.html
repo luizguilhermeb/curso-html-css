@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Seletores CSS (elementos-filho)</h1>
+
+    <p>O exemplo abaixo diz que todo p e h1 dentro de toda section terá <span class="codigo">color: red;</span>: 
+<pre class="codigo"><code>section p,
+section h1 {
+    color: red;
+}</code></pre>
+    </p>
+
+    <p>Também é possível usar "*" no lugar para dizer "todos os elementos".</p>
+    <section>
+        <h1>Seletores CSS</h1>
+        <p>Este parágrafo é afetado, pois está dentro da section</p>
+        <p>Este parágrafo é afetado, pois está dentro da section</p>
+    </section>
+
+    <h1>Maior Especificidade em classes</h1>
+
+    <h2 class="titulo-ex1">Titulo</h2>
+    <h3 class="titulo-ex1">Titulo</h3>
+    <h4 class="titulo-ex1">Titulo</h4>
+
+    <h1>Herança (inherit)</h1>
+
+    <div class="pai1">
+        <p>Pai</p>
+        <div class="filho">
+            <p>filha</p>
+        </div>
+    </div>
+
+    <p>Aqui, a div filho está herdadando o <span class="codigo">color:red</span> da div pai, para remover isto basta colocar <span class="codigo">color:initial</span>, pois o padrão é <span class="codigo">color:inherit</span></p>
+
+    <h1>Filhos Diretos</h1>
+
+    <div class="pai2">
+        pai
+        <div class="filha">
+            filha
+            <div class="filha">filha da filha</div>
+        </div>
+
+        <div class="filha">
+            filha
+            <div class="filha">filha da filha</div>
+        </div>
+    </div>
+
+    <p>Para isto foi usado o código:</p>
+<pre class="codigo"><code>.pai2 .filha {
+    color: initial;
+}
+
+.pai2 > .filha {
+    color: red;
+}</code></pre>
+
+    <h1>Mais de uma classe (seletor sem espaço)</h1>
+
+    <p>IMPORTANTE: quando se coloca <code class="codigo">.pai2.filha</code> sem espaços, isso significa que tal elemento precisa ter as duas classes.</p>
+
+    <hr>
+
+    <h1>Adjacent Sibling selector (+)</h1>
+
+    <p>Este seletor serve para dizer que o primeiro elemento que vier depois de outro receberá certo estilo, como aqui:</p>
+
+<pre class="codigo"><code>.pai3  p+h2 /*Todo primeiro h2 que vier depois do p será green*/ {
+    color: green;
+}
+
+.pai3 h2+p /*o mesmo serve para o p*/ {
+    color: red;
+}</code></pre>
+
+    <div class="pai3">
+        <h2>Titulo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h2>Titulo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <h1>General sibling selectors (~)</h1>
+
+    <p>Este serve para dizer que todos os elementos de tal tipo que vierem depois de tal elemento, receberá certo estilo.</p>
+
+<pre class="codigo"><code>.pai4 h2~p{
+    color: purple;
+}</code></pre>
+
+    <div class="pai4">
+        <h2>Titulo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h2>Titulo</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <h1>Seletores de Atributo</h1>
+
+    <h2>Titulo</h2>
+    <a id="link-atributo" href="../seletores-css/" target="_blank">Um elemento pode ser estilizado através de um atributo que ele tem</a>
+
+    <h1>Seletor not: e nth-child:</h1>
+
+    <p>A pseudo-classe not: diz que tais elementos vão ser estilizados com excessão de tal ou tais outros elementos.</p>
+
+    <p class="teste" atributo>Teste</p>
+    <p class="teste">Teste</p>
+    <p class="teste">Teste</p>
+    <p class="teste">Teste</p>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

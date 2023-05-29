@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+}
+
+#p1-exemplo {
+    background-color: aquamarine;
+}
+
+.p1-exemplo{
+    background-color: blueviolet;
+}
+
+p.p2-exemplo1 {
+    background-color: chartreuse;
+}
+
+.p2-exemplo2 {
+    background-color: yellow;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="b">
+    <h1>Especificidade CSS</h1>
+
+    <h2>Anotações dentro do CSS</h2>
+
+    <p>Basta começar com <strong>/*</strong> e terminar com <strong>*/</strong></p>
+
+    <h1>Ordem de precedência nas CSS</h1>
+
+    <ol>
+        <li>ID</li>
+        <li>Classes, Atributos de Classe, Pseudo-classes</li>
+        <li>Elementos, Pseudo Elementos</li>
+    </ol>
+
+    <h2>Exemplos</h2>
+
+    <p class="p1-exemplo" id="p1-exemplo">Entre um ID e uma classe, a classe prevalece.</p>
+
+    <p class="p2-exemplo1 p2-exemplo2" >Entre duas classes iguais, a que estiver por último prevalece por padrão, porém você pode aumentar o nível de especificidade do seletor, fazendo com que ele prevaleça.</p>
+</body>
+</html>
