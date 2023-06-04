@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*Estilo CSS para Impressão*/
+
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+}
+
+body::after {
+    content: "Site feito por github.com/luizguilhermeb";
+}
+
+nav {
+    display: none;
+}
