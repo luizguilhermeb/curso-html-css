@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/*Estilo para Impressora*/
+
+@media print {
+    [alt="icone-do-celular"] {
+        display: none;
+    }
+
+    [alt="icone-da-impressora"] {
+        display: inline-block;
+    }
+
+    main {
+        border: 1px dashed black;
+        border-radius: 10px;
+        height: 50%;
+    }
+
+    #main-div::after {
+        content: "Você está em uma Impressora";
+        border-top: 1px dashed black;
+        padding-top: 10px;
+    }
+}
+
+/*Deletar icone do celular ao ultrapassar 768px*/
+
+@media screen and (min-width: 768px) {
+    [alt="icone-do-celular"] {
+        display: none;
+    }
+}
+
+/*Estilo para Tablet*/
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    [alt="icone-do-tablet"] {
+        display: inline-block;
+    }
+
+    body {
+        background: rgb(24, 24, 24) url(../imagens/back-tablet.jpg) no-repeat center / cover;
+    }
+
+    #main-div::after {
+        content: "Você está em um Tablet";
+    }
+}
+
+/*Estilo para Computador*/
+
+@media screen and (min-width: 993px) and (max-width: 3840px){
+    [alt="icone-do-pc"] {
+        display: inline-block;
+    }
+
+    body {
+        background: rgb(24, 24, 24) url(../imagens/back-pc.jpg) no-repeat center / cover;
+    }
+
+    #main-div::after {
+        content: "Você está em uma Computador";
+    }
+}
+
+/*Estilo para TVs*/
+
+@media screen and (min-width: 3841px) {
+    [alt="icone-da-tv"] {
+        display: inline-block;
+        width: 70%;
+        max-width: 400px;
+    }
+
+    h1 {
+        font-size: 9em;
+    }
+
+    body {
+        background: rgb(24, 24, 24) url(../imagens/back-tv.jpg) no-repeat center / cover;
+    }
+
+    #main-div::after {
+        content: "Você está em uma TV";
+        font-size: 4em;
+    }
+}

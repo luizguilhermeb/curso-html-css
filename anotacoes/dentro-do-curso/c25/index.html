@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 25</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+        background-color: bisque;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
 <body>
     <h1>Media Queries</h1>
 
@@ -23,5 +28,27 @@
     <p>São configurações de media que aplicam estilos específicos para tipos de media com certas características</p>
 
     <p>Ex: Verificar se um aparelho está em modo portrait(retrato) ou landscape(paisagem)</p>
+
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;estilos/retrato.css&quot; media=&quot;screen and (orientation: portrait)&quot;&gt;
+</code></pre>
+
+    <p>Ou até no próprio CSS</p>
+
+<pre><code>@media screen and (orientation: portrait) {
+    body, html {
+        background: #233EFF url(../imagens/cev-portrait.jpg) no-repeat center bottom / contain;
+    }
+}</code></pre>
+
+    <h1>Mobile First</h1>
+
+    <p>Surgiu em 2009 com Luke Wroblewski, e visa desenvolver um site primariamente para celular e depois torna-lo responsivo para desktop secundariamente.</p>
+
+    <h2>Vantagens</h2>
+    <ul>
+        <li>SEO melhor no google</li>
+        <li>PERFORMANCE e MELHOR EXPERIÊNCIA do usuário</li>
+        <li>CREDIBILIDADE pelas pessoas, por causa das vantagens acima</li>
+    </ul>
 </body>
 </html>
