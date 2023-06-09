@@ -60,7 +60,7 @@
     }
 
     #main-div::after {
-        content: "Você está em uma Computador";
+        content: "Você está em um Computador";
     }
 }
 
