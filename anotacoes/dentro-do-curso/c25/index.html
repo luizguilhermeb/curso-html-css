@@ -50,5 +50,39 @@
         <li>PERFORMANCE e MELHOR EXPERIÊNCIA do usuário</li>
         <li>CREDIBILIDADE pelas pessoas, por causa das vantagens acima</li>
     </ul>
+
+    <h1>Typical Device Breakpoints</h1>
+
+    <p>São pontos específicos de media-query, em que o site muda certos estilos para certos dispositivos de acordo com sua resolução.</p>
+
+    <h1>Menu hamburguer</h1>
+
+    <p>Para fazer um menu responsivo e profissional é necessário usar Javascript. Como no exemplo abaixo:</p>
+
+    <p>HTML</p>
+
+<pre><code>&lt;span class=&quot;material-symbols-outlined&quot; id=&quot;icone-menu&quot; onclick=&quot;clickMenu()&quot;&gt;menu&lt;/span&gt;
+    &lt;nav id=&quot;itensNav&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Fale Conosco&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Notícias&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Orçamento&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Avalie-nos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;</code></pre>
+
+    <p>Javascript</p>
+
+<pre><code>&lt;script&gt;
+    function clickMenu() {
+        if (itensNav.style.display == &quot;none&quot;) {
+            itensNav.style.display = &quot;block&quot;;
+        } else {
+            itensNav.style.display = &quot;none&quot;;
+        }
+    }
+&lt;/script&gt;
+</code></pre>
 </body>
 </html>
