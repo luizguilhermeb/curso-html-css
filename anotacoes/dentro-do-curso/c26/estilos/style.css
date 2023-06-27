@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+:root {
+
+    --cor0: #000000;
+    --cor1: #0C0C0C;
+    --cor2: #0E0A0B;
+    --cor3: #36181A;
+    --cor4: #ff0008;
+    --cor5: #b1949156;
+
+    --fonte-principal: 'Share Tech Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background-image: linear-gradient(to right, #000000, #0C0C0C, #0E0A0B, #36181A);  DEGRADÊ PRA DESKTOP*/
+    background-color: var(--cor0);
+
+    font-family: var(--fonte-principal);
+    text-transform: uppercase;
+}
+
+main {
+    height: 100vh;
+}
+
+section {
+    background-color: var(--cor0);
+    color: var(--cor4);
+    max-width: 350px;
+    width: 80vw;
+    height: 80vh;
+    max-height: 600px;
+    padding: 40px 20px;
+    border: 1px solid var(--cor4);
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#imagem-formulario {
+    display: none;
+}
+
+#area-formulario {
+    text-align: center;
+}
+
+#area-formulario h1 {
+    margin: 15px 0px;
+}
+
+#simbolo-imperial {
+    width: 100px;
+}
+
+#acao-formulario {
+    margin-top: 50px;
+}
+
+form div {
+    width: min-content;
+    margin: auto;
+    text-align: left;
+}
+
+form div div label {
+    font-size: 1.3em;
+}
+
+form div div input {
+    max-width: 300px;
+    width: 70vw;
+    height: 30px;
+    padding: 10px;
+    margin: 10px 0px;
+    text-transform: uppercase;
+    border: 1px solid var(--cor4);
+    background-color: var(--cor0);
+    color: var(--cor4);
+}
+
+form #entrada-formulario input:focus {
+    outline: 1px solid var(--cor4);
+}
+
+form #entrada-formulario div input::placeholder {
+    color: var(--cor5);
+}
+
+form div [type="submit"],
+form div [type="reset"] {
+    max-width: 325px;
+    width: 75vw;
+    height: 50px;
+    background-color: var(--cor0);
+    border: 1px solid var(--cor4);
+    color: var(--cor4);
+    font-family: var(--fonte-principal);
+    font-size: 1.4em;
+}
+
+form div [type="submit"]:hover,
+form div [type="reset"]:hover {
+    transform: scale(0.99);
+}

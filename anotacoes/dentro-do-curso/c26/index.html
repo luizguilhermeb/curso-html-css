@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    
+    <main>
+        <section>
+            <div id="imagem-formulario">
+
+            </div>
+            <div id="area-formulario">
+                
+                <h1>Login Imperial</h1>
+                <img src="imagens/simbolo-imperial.png" alt="simbolo imperial" id="simbolo-imperial">
+
+                <form action="login.php" method="post">
+                    <div id="entrada-formulario">
+                        <div>
+                            <label for="id-tk">TK</label>
+                            <input type="text" name="tk" id="id-tk" placeholder="0000" required aria-required="true" pattern="^(?!0000)\d{3,4}$" autocomplete="off">
+                        </div>
+                        <div>
+                            <label for="id-ce">CE</label>
+                            <input type="text" name="ce" id="id-ce" placeholder="AA000" required aria-required="true" pattern="^[A-Za-z]{2}[1-9]{3}$" autocomplete="off">
+                        </div>
+                    </div>
+                    <div id="acao-formulario">
+                        <div>
+                            <input type="submit" value="Entrar">
+                        </div>
+                        <div>
+                            <input type="reset" value="Limpar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
