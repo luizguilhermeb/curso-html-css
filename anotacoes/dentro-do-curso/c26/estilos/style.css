@@ -10,6 +10,7 @@
     --cor3: #36181A;
     --cor4: #ff0008;
     --cor5: #b1949156;
+    --cor6: #f8bec0;
 
     --fonte-principal: 'Share Tech Mono', monospace;
 }
@@ -20,9 +21,7 @@
 }
 
 body {
-    /*background-image: linear-gradient(to right, #000000, #0C0C0C, #0E0A0B, #36181A);  DEGRADÊ PRA DESKTOP*/
-    background-color: var(--cor0);
-
+    background-image: linear-gradient(to bottom, #000000, #0C0C0C, #0E0A0B, #36181A);
     font-family: var(--fonte-principal);
     text-transform: uppercase;
 }
@@ -40,6 +39,7 @@ section {
     max-height: 600px;
     padding: 40px 20px;
     border: 1px solid var(--cor4);
+    box-shadow: 0px 0px 5px var(--cor4);
 
     position: relative;
     top: 50%;
@@ -55,12 +55,49 @@ section {
     text-align: center;
 }
 
+@keyframes pisca-texto {
+    0% {
+        text-shadow: 0px 0px 0px var(--cor6);
+    }
+
+    3% {
+        text-shadow: 0px 0px 20px var(--cor6);
+    }
+
+    6% {
+        text-shadow: 0px 0px 0px var(--cor6);
+    }
+
+    9% {
+        text-shadow: 0px 0px 20px var(--cor6);
+    }
+}
+
 #area-formulario h1 {
     margin: 15px 0px;
+    border-bottom: 1px dashed var(--cor4);
+    width: max-content;
+    margin: 20px auto;
+    text-shadow: 0px 0px 20px var(--cor4);
+    color: var(--cor6);
+
+    animation: pisca-texto 4s infinite;
+}
+
+@keyframes rotacionar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #simbolo-imperial {
-    width: 100px;
+    width: 70px;
+
+    animation: rotacionar 30s linear infinite;
 }
 
 #acao-formulario {
@@ -87,10 +124,12 @@ form div div input {
     border: 1px solid var(--cor4);
     background-color: var(--cor0);
     color: var(--cor4);
+    box-shadow: 0px 0px 5px var(--cor4);
 }
 
 form #entrada-formulario input:focus {
     outline: 1px solid var(--cor4);
+    box-shadow: 0px 0px 15px var(--cor4);
 }
 
 form #entrada-formulario div input::placeholder {

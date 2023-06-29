@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: rgb(80, 241, 48);
+    width: 400px;
+    height: 400px;
+}
+
+@keyframes brilho{
+    95% {
+        color: black;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+div a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-decoration: none;
+    color: black;
+    background-color: aliceblue;
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    animation: brilho 3s infinite;
+}
