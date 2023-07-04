@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.DivFloat {
+    width: 200px;
+    height: 200px;
+}
+
+#Div1 {
+    background-color: aquamarine;
+    float: left;
+}
+
+#Div2 {
+    background-color: bisque;
+    float: right;
+}
+
+p {
+    clear: both;
+}

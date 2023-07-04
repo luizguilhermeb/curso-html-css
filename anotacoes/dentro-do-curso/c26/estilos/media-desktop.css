@@ -21,14 +21,12 @@ section {
 }
 
 #imagem-formulario {
-    display: inline-block;
+    display: block;
     width: 400px;
     height: 91vh;
     max-height: 680px;
     margin: -40px 0px 0px -10px;
-
-    position: relative;
-    left: 470px;
+    float: right;
 }
 
 #imagem-formulario img {
@@ -62,9 +60,7 @@ section {
 }
 
 #area-formulario {
-    display: inline-block;
-    vertical-align: top;
+    display: block;
     margin-left: 70px;
-    position: relative;
-    right: 370px;
+    float: left;
 }
