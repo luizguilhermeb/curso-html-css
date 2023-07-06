@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmet Abreviation</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Emmet Abreviation</h1>
 
+    <h2>HTML</h2>
+
     <p>Abreviar div com classe e id: div#identificador.uma_classe.outra_classe </p>
 
     <p>Abreviar div com classe e id, e multiplaca-la: div.uma_classe.outra_classe*4 </p>
+
+    <p>Abreviar div com classe e id, e multiplaca-la, enumerando os id: div#identificador-$.uma_classe.outra_classe*4 </p>
+
+    <p>Abreviar elementos dentro de elementos: ul>li{$}*4</p>
+
+    <p>Abreviar elementos dentro de elementos por grupos: ul>(li>a{$})*4</p>
+
+    <p>Abreviar elementos especificando atributos: div>a[href="https://youtube.com"]</p>
+
+    <p>Abreviar elementos com filhos diferentes: div>h1+p*4+div*2</p>
+
+    <h2>CSS</h2>
+
+    <p>Nas CSS é mais simples, bastar usar expressões como "w10px" para width: 10px; e "h20px" para height: 20px; (desconsidere as aspas)</p>
 
 </body>
 </html>
