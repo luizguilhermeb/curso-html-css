@@ -7,20 +7,63 @@
     box-sizing: border-box;
 }
 
-#flex-container {
-    background-color: bisque;
+body {
+    margin-bottom: 500px;
+}
+
+h1, h2, p {
+    margin: 20px 10px;
+}
+
+.container {
+    background-color: antiquewhite;
+    padding: 10px;
+
     display: flex;
-    height: 200px;
-    flex-direction: row; /* Eixo Princial */
-    justify-content: flex-start; /* Eixo Princial */
-    gap: 1.875rem;
-    align-items: stretch;
+    flex-direction: row; /*Direção do Flex*/
+    flex-wrap: wrap; /* Quebra de linha */
+    flex-flow: row wrap; /* Junção de row e wrap */
+
+    justify-content: center; /* Justificação do Conteúdo Principal*/
+    
+    align-items: center; /* Justificação do Conteúdo Perpendicular (Por Linha)*/ 
+    align-content: center; /* Justificação do conteúdo Perpendicular (Decidir se os elementos vão ficar espremidos, espalhados ou para algum lado) */
+
+    gap: 10px 20px; /* espaçamento  interno de cada item */
 }
 
-.flex-item {
+.bloco {
     background-color: aquamarine;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    flex-grow: 1; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
+    flex-shrink: 1; /* Seu valor padrão é 1, ou seja, já tem a habilidade de diminuir, aplicando o valor 2 essa habilidade aumenta, podendo diminuir mais do  que os outros. */
+    flex-basis: auto; /* Defina a largura base do elemento caso o main axis seja row, ou a altura base do elemento caso o main axis seja column; além disso colocando auto como padrão, o conteúdo dentro será usado no flex-grow */
+    flex: 1 1 auto; /* Shorthand para flex-grow/flex-shrink/flex-basis */
 }
 
-.flex-item:first-child {
-    height: 150px;
+.bloco:nth-child(even) {
+    background-color: chartreuse;
+}
+
+.bloco:nth-child(23) {
+    flex-grow: 8; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
+    align-self: flex-end; /* o atributo align-content se sobrepõe ao align-self que serve para mudar individualmente a posição no eixo perpendicular. */
+}
+
+
+.bloco:last-child {
+    order: -1;
+    background-color: green;
+}
+
+pre {
+    width: 700px;
+    overflow: auto;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgb(59, 57, 57);
+    color: rgb(215, 212, 212);
 }

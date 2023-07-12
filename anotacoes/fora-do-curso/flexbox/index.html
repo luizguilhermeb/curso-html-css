@@ -11,99 +11,80 @@
 
     <p>Praticamente o Flexbox se resume a um elemento pai que contém filhos que vão se adaptar flexivelmente a ele.</p>
 
-    <p>Sempre há um main axis ou eixo principal que por padrão começa da esquerda e vai para a direita.</p>
+    <p>Sempre há um eixo principal (main axis) que por padrão começa da esquerda e vai para a direita e um eixo perpendicular (cross axis).</p>
 
-    <div id="flex-container">
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 1</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 2</h1>
-        </div>
-        <div class="flex-item">
-            <h1>Item 3</h1>
-        </div>
+    <h2>flex-example</h2>
+
+    <div class="container">
+        <div class="bloco">1</div>
+        <div class="bloco">2</div>
+        <div class="bloco">3</div>
+        <div class="bloco">4</div>
+        <div class="bloco">5</div>
+        <div class="bloco">6</div>
+        <div class="bloco">7</div>
+        <div class="bloco">8</div>
+        <div class="bloco">9</div>
+        <div class="bloco">10</div>
+        <div class="bloco">11</div>
+        <div class="bloco">12</div>
+        <div class="bloco">13</div>
+        <div class="bloco">14</div>
+        <div class="bloco">15</div>
+        <div class="bloco">16</div>
+        <div class="bloco">17</div>
+        <div class="bloco">18</div>
+        <div class="bloco">19</div>
+        <div class="bloco">20</div>
+        <div class="bloco">21</div>
+        <div class="bloco">22</div>
+        <div class="bloco">23</div>
+        <div class="bloco">24</div>
     </div>
+
+    <p>Código usado para o container acima:</p>
+
+<pre><code>.container {
+        background-color: antiquewhite;
+        padding: 10px;
+    
+        display: flex;
+        flex-direction: row; /*Direção do Flex*/
+        flex-wrap: wrap; /* Quebra de linha */
+        flex-flow: row wrap; /* Junção de row e wrap */
+    
+        justify-content: center; /* Justificação do Conteúdo Principal*/
+        
+        align-items: center; /* Justificação do Conteúdo Perpendicular (Por Linha)*/ 
+        align-content: center; /* Justificação do conteúdo Perpendicular (Decidir se os elementos vão ficar espremidos, espalhados ou para algum lado) */
+    
+        gap: 10px 20px; /* espaçamento  interno de cada item */
+    }
+    
+    .bloco {
+        background-color: aquamarine;
+        border-radius: 10px;
+        width: 100px;
+        height: 100px;
+        flex-grow: 1; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
+        flex-shrink: 1; /* Seu valor padrão é 1, ou seja, já tem a habilidade de diminuir, aplicando o valor 2 essa habilidade aumenta, podendo diminuir mais do  que os outros. */
+        flex-basis: auto; /* Defina a largura base do elemento caso o main axis seja row, ou a altura base do elemento caso o main axis seja column; além disso colocando auto como padrão, o conteúdo dentro será usado no flex-grow */
+        flex: 1 1 auto; /* Shorthand para flex-grow/flex-shrink/flex-basis */
+    }
+    
+    .bloco:nth-child(even) {
+        background-color: chartreuse;
+    }
+    
+    .bloco:nth-child(23) {
+        flex-grow: 8; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
+        align-self: flex-end; /* o atributo align-content se sobrepõe ao align-self que serve para mudar individualmente a posição no eixo perpendicular. */
+    }
+    
+    
+    .bloco:last-child {
+        order: -1;
+        background-color: green;
+    }</code></pre>
 </body>
 </html>

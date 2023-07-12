@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, p {
+    margin: 30px 10px;
+}
+
+.container {
+    border: 5px solid cyan;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 200px; /*Alinha os itens em colunas que podem ser medidas também por fração*/
+    grid-template-rows: 200px; /* Alinha o tamanho de cada linha, o valor auto é o tamanho padrão do elemento */
+    grid-auto-rows: 100px; /* Dá um tamanho para as linhas que ainda não foram especificadas, o mesmo serve para grid-auto-columns */
+}
+
+.item {
+    background-color: rgb(198, 125, 191);
+    margin: 10px;
+}

@@ -128,7 +128,7 @@ section h1 {
 
     <h2>:nth-child</h2>
 
-    <p>A pseudo-classe :nth-child estiliza um filho específico por número, ou todos os pares ou todos os ímpares.</p>
+    <p>A pseudo-classe :nth-child estiliza um filho específico por número, ou todos os pares ou todos os ímpares. Além disso, pode-se fazer cálculos como "5n" que irá pular de 5 em 5, e "5n - 1" que fará o mesmo porém selecionando o número anterior por causa do -1.</p>
 
     <ul>
         <li>1</li>
@@ -138,8 +138,14 @@ section h1 {
         <li>5</li>
     </ul>
 
-    <h3>:nth-of-type</h3>
+    <h3>:nth-last-child</h3>
+    <p>Um seletor que funciona como o nth-child, porém começa no final.</p>
 
+    <h3>:nth-of-type</h3>
     <p>Estiliza os elementos apenas se forem do mesmo tipo de tag; é importante não ultilizar apenas classes ou id em seu seletor, sempre coloque a tag corresponde antes.</p>
+
+    <h3>:nth-last-of-type</h3>
+    <p>A mesma função do nth-of-type,porém começa do final.</p>
+
 </body>
 </html>

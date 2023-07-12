@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+#nav-bar > .nav-list {
+    display: none;
+}
+
+#nav-bar > .nav-button {
+    display: none;
+}
+
+#menu-icon {
+    display: block;
+}
+
+#mobile-menu {
+    display: block;
+    background-color: #ffe4c4;
+}
+
+#mobile-menu > .nav-list > .nav-item {
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+#mobile-menu > .nav-list > .nav-item:not(:nth-child(3)) {
+    border-bottom: 1px solid rgb(158, 92, 64);
+}
+
+#mobile-menu > .nav-button > button{
+    width: 100%;
+    border-radius: 0px;
+}
