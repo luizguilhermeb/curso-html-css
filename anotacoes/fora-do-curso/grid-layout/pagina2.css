@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, p, a {
+    margin: 30px 10px;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-areas: 
+    "i1 i1"
+    "i2 i3"
+    "i4 i4"
+    ;
+}
+
+.item {
+    background-color: rgb(198, 125, 191);
+}
+
+.item:nth-child(1) {
+    grid-area: i1;
+    background-color: aquamarine;
+}
+
+.item:nth-child(2) {
+    grid-area: i2;
+    background-color: azure;
+}
+
+.item:nth-child(3) {
+    grid-area: i3;
+    background-color: bisque;
+}
+
+.item:nth-child(4) {
+    grid-area: i4;
+    background-color: tomato;
+}

@@ -10,7 +10,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, p {
+h1, h2, p, a {
     margin: 30px 10px;
 }
 
@@ -18,12 +18,22 @@ h1, p {
     border: 5px solid cyan;
     margin: 10px;
     display: grid;
-    grid-template-columns: 1fr 2fr 200px; /*Alinha os itens em colunas que podem ser medidas também por fração*/
-    grid-template-rows: 200px; /* Alinha o tamanho de cada linha, o valor auto é o tamanho padrão do elemento */
-    grid-auto-rows: 100px; /* Dá um tamanho para as linhas que ainda não foram especificadas, o mesmo serve para grid-auto-columns */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /*Alinha os itens em colunas que podem ser medidas também por fração*/ /* minmax(largura mínima, largura máxima) */ /* repeat(quantas vezes irá repetir, o que irá repetir) */ /* auto-fit = colunas automáticas auto-fill = cria células vazias como se existissem na grid (https://youtu.be/R_dqkhX7WbU?t=1682) */
+    grid-template-rows: none; /* Alinha o tamanho de cada linha, o valor auto é o tamanho padrão do elemento */
+    grid-auto-rows: auto; /* Dá um tamanho para as linhas que ainda não foram especificadas, o mesmo serve para grid-auto-columns */
+    padding: 10px;
+    grid-gap: 10px; /* espaçamento entre itens-filho */
 }
 
 .item {
     background-color: rgb(198, 125, 191);
-    margin: 10px;
+}
+
+.item:nth-child(1) {
+    /* grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-row: 1/3;
+    grid-column: 1 / span 2; /* Especifica onde um item deve iniciar e terminar como se fosse uma tabela, a medida usada é pela linha virtual (line) */ /* O span é usado para expandir */
 }
