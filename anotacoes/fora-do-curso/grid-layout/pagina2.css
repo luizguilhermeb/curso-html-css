@@ -15,16 +15,24 @@ h1, h2, p, a {
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 8fr 1fr;
-    grid-template-areas: 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(247, 247, 141);
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 10px;
+    justify-content: space-around; /*Alinha o conteúdo horizontalmente*/
+    justify-items: stretch; /* Alinha o item horizontalmente*/
+    align-items: center; /* Alinha o item verticalmente*/
+    align-content: end; /*Alinha o conteúdo verticalmente*/
+    /* grid-template-columns: 1fr 4fr; /* Colunas do grid-template */
+    /* grid-template-rows: 1fr 8fr 1fr; Linhas do grid-template */
+    /* grid-template-areas: 
     "i1 i1"
     "i2 i3"
     "i4 i4"
-    ;
+    ; Alinhas os itens grid-area em um template */
 }
 
 .item {
@@ -32,21 +40,19 @@ h1, h2, p, a {
 }
 
 .item:nth-child(1) {
-    grid-area: i1;
-    background-color: aquamarine;
+    justify-self: start; /* Alinha um item sozinho horizontalmente */
+    align-self: stretch; /* Alinha um item sozinho verticalmente */
+    /* grid-area: i1; */
 }
 
 .item:nth-child(2) {
-    grid-area: i2;
-    background-color: azure;
+    /* grid-area: i2; */
 }
 
 .item:nth-child(3) {
-    grid-area: i3;
-    background-color: bisque;
+    /* grid-area: i3; */
 }
 
 .item:nth-child(4) {
-    grid-area: i4;
-    background-color: tomato;
+    /* grid-area: i4; nomeia o item, para ser ultilizado em um template grid-template-areas */
 }
