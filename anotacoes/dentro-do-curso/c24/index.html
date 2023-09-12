@@ -1,106 +1,174 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Capítulo 23</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capítulo 24</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Formulários</h1>
 
     <h2>Exemplo simples</h2>
 
     <form action="cadastro.php" method="post" autocomplete="off">
-        <p><label for="id-nome">Nome: </label><input type="text" name="nome" id="id-nome"></p>
-        <p><label for="id-sobrenome">Sobrenome: </label><input type="text" name="sobrenome" id="id-sobrenome"></p>
-        <input type="submit" value="Salvar">
+      <div>
+        <label for="id-nome">Nome: </label>
+        <input type="text" name="nome" id="id-nome" />
+      </div>
+      <div>
+        <label for="id-sobrenome">Sobrenome: </label>
+        <input type="text" name="sobrenome" id="id-sobrenome" />
+      </div>
+      <div>
+        <input type="reset" value="limpar" />
+        <input type="submit" value="salvar" />
+      </div>
     </form>
 
     <h1>Métodos GET e POST</h1>
 
-    <p>O GET é usado quando não são usados dados sensíveis. Além disso ele tem uma limitação de 3000 bytes, o que é mais ou menos 3000 letras.</p>
+    <p>
+      O GET é usado quando não são usados dados sensíveis. Além disso ele tem
+      uma limitação de 3000 bytes, o que é mais ou menos 3000 letras.
+    </p>
 
-    <p>O POST ajuda os dados a ficarem um pouco mais seguros, no entanto não os deixa criptografados, e tem um limite muito maior de bytes que o GET.</p>
+    <p>
+      O POST ajuda os dados a ficarem um pouco mais seguros, no entanto não os
+      deixa criptografados, e tem um limite muito maior de bytes que o GET.
+    </p>
 
     <h1>Formulário com senha</h1>
 
     <form action="cadastro.php" method="post">
-        <div>
-            <label for="id-usuario">Usuário</label>
-            <input placeholder="Usuário" type="text" name="usuario" id="id-usuario" required minlength="5" maxlength="15" autocomplete="username">
-        </div>
-        <div>
-            <label for="id-senha">Senha</label>
-            <input placeholder="Senha" type="password" name="senha" id="id-senha" required minlength="8" autocomplete="current-password">
-        </div>
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <label for="id-usuario">Usuário</label>
+        <input
+          placeholder="Usuário"
+          type="text"
+          name="usuario"
+          id="id-usuario"
+          required
+          minlength="5"
+          maxlength="15"
+          autocomplete="username"
+        />
+      </div>
+      <div>
+        <label for="id-senha">Senha</label>
+        <input
+          placeholder="Senha"
+          type="password"
+          name="senha"
+          id="id-senha"
+          required
+          minlength="8"
+          autocomplete="current-password"
+        />
+      </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Formulário com média</h1>
 
     <form action="cadastro.php" method="get">
-        <div>
-            <label for="id-nome">Nome</label>
-            <input type="text" name="nome" id="id-nome" placeholder="Nome completo" required autocomplete="name" minlength="4" maxlength="50" pattern="^[a-zA-Z\s]+$" title="Apenas letras e espaços são permitidos">
-        </div>
+      <div>
+        <label for="id-nome">Nome</label>
+        <input
+          type="text"
+          name="nome"
+          id="id-nome"
+          placeholder="Nome completo"
+          required
+          autocomplete="name"
+          minlength="4"
+          maxlength="50"
+          pattern="^[a-zA-Z\s]+$"
+          title="Apenas letras e espaços são permitidos"
+        />
+      </div>
 
-        <div>
-            <label for="id-media">Media</label>
-            <input style="width: 170px;" type="number" name="media" id="id-media" required placeholder="Media Bimestral" step="0.1" min="0" max="10">
-        </div>
+      <div>
+        <label for="id-media">Media</label>
+        <input
+          style="width: 170px"
+          type="number"
+          name="media"
+          id="id-media"
+          required
+          placeholder="Media Bimestral"
+          step="0.1"
+          min="0"
+          max="10"
+        />
+      </div>
 
-        <div>
-            <label for="id-data">Data</label>
-            <input type="month" name="data" id="id-data" required>
-        </div>
+      <div>
+        <label for="id-data">Data</label>
+        <input type="month" name="data" id="id-data" required />
+      </div>
 
-        <div>
-            <label for="id-horario">Horário</label>
-            <input type="time" name="horario" id="id-horario" required>
-        </div>
+      <div>
+        <label for="id-horario">Horário</label>
+        <input type="time" name="horario" id="id-horario" required />
+      </div>
 
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Formulário com email e telefone</h1>
 
     <form action="cadastro.php" method="post" autocomplete="on">
-        <fieldset>
-            <legend>Dados Pessoais</legend>
-            <div>
-                <label for="id-email">Email</label>
-                <input type="email" name="email" id="id-email" required autocomplete="email">
-            </div>
-            <div>
-                <label for="id-telefone">Telefone</label>
-                <input type="tel" name="telefone" id="id-telefone" required autocomplete="tel" pattern="^(?:\+55)?(?:9)?\d{4}-\d{4}$" placeholder="x xxxx-xxxx">
-            </div>
-        </fieldset>
+      <fieldset>
+        <legend>Dados Pessoais</legend>
         <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
+          <label for="id-email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="id-email"
+            required
+            autocomplete="email"
+          />
         </div>
+        <div>
+          <label for="id-telefone">Telefone</label>
+          <input
+            type="tel"
+            name="telefone"
+            id="id-telefone"
+            required
+            autocomplete="tel"
+            pattern="^(?:\+55)?(?:9)?\d{4}-\d{4}$"
+            placeholder="x xxxx-xxxx"
+          />
+        </div>
+      </fieldset>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Checkbox e Radio Bottom</h1>
 
     <form action="cadastro.php" method="get" autocomplete="on">
+      <fieldset>
+        <legend>Sexo</legend>
+        <input type="radio" name="sexo" id="id-sexo-m" />
+        <label for="id-sexo-m">Masculino</label>
+        <input type="radio" name="sexo" id="id-sexo-f" />
+        <label for="id-sexo-f">Feminino</label>
+      </fieldset>
 
-        <fieldset>
-            <legend>Sexo</legend>
-            <input type="radio" name="sexo" id="id-sexo-m"> <label for="id-sexo-m">Masculino</label>
-            <input type="radio" name="sexo" id="id-sexo-f"> <label for="id-sexo-f">Feminino</label>
-        </fieldset>
-
-        <!--
+      <!--
             
             
         INPUT DO TIPO RADIO TEM QUE TER O MESMO NAME PARA FUNCIONAR
@@ -108,166 +176,213 @@
 
         -->
 
-        <fieldset>
-            <legend>Esportes Favoritos</legend>
-            <input type="checkbox" name="futebol" id="id-futebol"> <label for="id-futebol">Futebol</label> <br>
-            <input type="checkbox" name="basquete" id="id-basquete"> <label for="id-basquete">Basquete</label> <br>
-            <input type="checkbox" name="golfe" id="id-golfe"> <label for="id-golfe">Golfe</label> <br>
-        </fieldset>
+      <fieldset>
+        <legend>Esportes Favoritos</legend>
+        <input type="checkbox" name="futebol" id="id-futebol" />
+        <label for="id-futebol">Futebol</label> <br />
+        <input type="checkbox" name="basquete" id="id-basquete" />
+        <label for="id-basquete">Basquete</label> <br />
+        <input type="checkbox" name="golfe" id="id-golfe" />
+        <label for="id-golfe">Golfe</label> <br />
+      </fieldset>
 
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Color, range e file em HTML</h1>
 
     <form action="cadastro.php" method="post">
+      <div>
+        <label for="id-satisfacao">Satisfação:</label>
+        <input
+          type="range"
+          name="satisfacao"
+          id="id-satisfacao"
+          min="1"
+          max="5"
+        />
+      </div>
 
-        <div>
-            <label for="id-satisfacao">Satisfação:</label>
-            <input type="range" name="satisfacao" id="id-satisfacao" min="1" max="5">
-        </div>
+      <div>
+        <label for="id-cor">Cor:</label>
+        <input type="color" name="cor" id="id-cor" />
+      </div>
 
-        <div>
-            <label for="id-cor">Cor:</label>
-            <input type="color" name="cor" id="id-cor">
-        </div>
+      <div>
+        <input type="file" name="arquivo" id="id-arquivo" />
+      </div>
 
-        <div>
-            <input type="file" name="arquivo" id="id-arquivo">
-        </div>
-
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Select, datalist e textarea em HTML</h1>
 
     <form action="cadastro.php" method="get">
+      <div>
+        <label for="id-estado">Estado</label>
 
-        <div>
-            <label for="id-estado">Estado</label>
+        <select name="estado" id="id-estado">
+          <option value="" selected>--- Escolha ---</option>
 
-            <select name="estado" id="id-estado">
+          <optgroup label="Suldeste">
+            <option value="sp">São Paulo</option>
+            <option value="es">Espírito Santo</option>
+            <option value="mg">Minas Gerais</option>
+            <option value="rj">Rio de Janeiro</option>
+          </optgroup>
 
-                <option value="" selected>--- Escolha ---</option>
+          <optgroup label="Norte">
+            <option value="ac">Acre</option>
+            <option value="ap">Amapá</option>
+            <option value="am">Amazonas</option>
+            <option value="pa">Pará</option>
+            <option value="ro">Rondônia</option>
+            <option value="rr">Roraima</option>
+            <option value="to">Tocantins</option>
+          </optgroup>
 
-                <optgroup label="Suldeste">
-                    <option value="sp">São Paulo</option>
-                    <option value="es">Espírito Santo</option>
-                    <option value="mg">Minas Gerais</option>
-                    <option value="rj">Rio de Janeiro</option>
-                </optgroup>
+          <optgroup label="Nordeste">
+            <option value="al">Alagoas</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+            <option value="ma">Maranhão</option>
+            <option value="pb">Paraíba</option>
+            <option value="pe">Pernambuco</option>
+            <option value="pi">Piauí</option>
+            <option value="rn">Rio Grande do Norte</option>
+            <option value="se">Sergipe</option>
+          </optgroup>
 
-                <optgroup label="Norte">
-                    <option value="ac">Acre</option>
-                    <option value="ap">Amapá</option>
-                    <option value="am">Amazonas</option>
-                    <option value="pa">Pará</option>
-                    <option value="ro">Rondônia</option>
-                    <option value="rr">Roraima</option>
-                    <option value="to">Tocantins</option>
-                </optgroup>
+          <optgroup label="Centro-Oeste">
+            <option value="go">Goiás</option>
+            <option value="mt">Mato Grosso</option>
+            <option value="ms">Mato Grosso do Sul</option>
+            <option value="df">Distrito Federal</option>
+          </optgroup>
 
-                <optgroup label="Nordeste">
-                    <option value="al">Alagoas</option>
-                    <option value="ba">Bahia</option>
-                    <option value="ce">Ceará</option>
-                    <option value="ma">Maranhão</option>
-                    <option value="pb">Paraíba</option>
-                    <option value="pe">Pernambuco</option>
-                    <option value="pi">Piauí</option>
-                    <option value="rn">Rio Grande do Norte</option>
-                    <option value="se">Sergipe</option>
-                </optgroup>
+          <optgroup label="Sul">
+            <option value="pr">Paraná</option>
+            <option value="rs">Rio Grande do Sul</option>
+            <option value="sc">Santa Catarina</option>
+          </optgroup>
+        </select>
+      </div>
 
-                <optgroup label="Centro-Oeste">
-                    <option value="go">Goiás</option>
-                    <option value="mt">Mato Grosso</option>
-                    <option value="ms">Mato Grosso do Sul</option>
-                    <option value="df">Distrito Federal</option>
-                </optgroup>
+      <div>
+        <label for="id-profissao">Profissão</label>
+        <input
+          type="text"
+          name="profissao"
+          id="id-profissao"
+          list="lista-profissao"
+        />
+        <datalist id="lista-profissao">
+          <option>Professor</option>
+          <option>Programador</option>
+          <option>Administrador</option>
+          <option>Advogado</option>
+        </datalist>
+      </div>
 
-                <optgroup label="Sul">
-                    <option value="pr">Paraná</option>
-                    <option value="rs">Rio Grande do Sul</option>
-                    <option value="sc">Santa Catarina</option>
-                </optgroup>
-            </select>
-        </div>
+      <div>
+        <label for="id-descricao">Descrição</label>
+        <textarea
+          name="descricao"
+          id="id-descricao"
+          cols="30"
+          rows="10"
+          style="resize: none"
+          placeholder="Digite sua descrição"
+        ></textarea>
+      </div>
 
-        <div>
-            <label for="id-profissao">Profissão</label>
-            <input type="text" name="profissao" id="id-profissao" list="lista-profissao">
-            <datalist id="lista-profissao">
-                <option>Professor</option>
-                <option>Programador</option>
-                <option>Administrador</option>
-                <option>Advogado</option>
-            </datalist>
-        </div>
-
-        <div>
-            <label for="id-descricao">Descrição</label>
-            <textarea name="descricao" id="id-descricao" cols="30" rows="10" style="resize: none;" placeholder="Digite sua descrição"></textarea>
-        </div>
-
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <h1>Elemento output em formulários HTML</h1>
 
     <form action="cadastro.php" method="get">
+      <div>
+        <label for="id-n1">Número 1:</label>
+        <input
+          type="number"
+          name="numero"
+          id="idn1"
+          min="0"
+          max="50"
+          required
+          oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)"
+        />
+      </div>
 
-        <div>
-            <label for="id-n1">Número 1:</label>
-            <input type="number" name="numero" id="idn1" min="0" max="50" required oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)">
-        </div>
+      <div>
+        <label for="id-n2">Número 2:</label>
+        <input
+          type="number"
+          name="numero"
+          id="idn2"
+          min="0"
+          max="50"
+          required
+          oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)"
+        />
+      </div>
 
-        <div>
-            <label for="id-n2">Número 2:</label>
-            <input type="number" name="numero" id="idn2" min="0" max="50" required oninput="idsoma.innerHTML = Number(idn1.value) + Number(idn2.value)">
-        </div>
+      <div>
+        <label for="idsoma">Soma: </label>
+        <output name="soma" id="idsoma">0</output>
+      </div>
 
-        <div>
-            <label for="idsoma">Soma: </label>
-            <output name="soma" id="idsoma">0</output>
-        </div>
+      <div>
+        <label for="idfaixa">Faixa: </label>
+        <input
+          type="range"
+          name="faixa"
+          id="idfaixa"
+          min="1"
+          max="5"
+          oninput="faixanumero.innerHTML = Number(idfaixa.value)"
+        />
+        <output id="faixanumero">3</output>
+      </div>
 
-        <div>
-            <label for="idfaixa">Faixa: </label>
-            <input type="range" name="faixa" id="idfaixa" min="1" max="5" oninput="faixanumero.innerHTML = Number(idfaixa.value)">
-            <output id="faixanumero">3</output>
-        </div>
+      <div>
+        <label for="idano">Em que ano você nasceu?</label>
+        <input
+          type="number"
+          name="ano"
+          id="idano"
+          min="1900"
+          max="2023"
+          oninput="calcIdade()"
+        />
+      </div>
 
-        <div>
-            <label for="idano">Em que ano você nasceu?</label>
-            <input type="number" name="ano" id="idano" min="1900" max="2023" oninput="calcIdade()">
-        </div>
+      <div>
+        <label for="ididade">Sua idade é:</label>
+        <output id="ididade">0</output>
+      </div>
 
-        <div>
-            <label for="ididade">Sua idade é:</label>
-            <output id="ididade">0</output>
-        </div>
-
-        <div>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Limpar">
-        </div>
+      <div>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </div>
     </form>
 
     <script>
-        function calcIdade() {
-            let atual = new Date().getFullYear()
-            ididade.innerHTML = Number(atual) - Number(idano.value)
-        }
+      function calcIdade() {
+        let atual = new Date().getFullYear();
+        ididade.innerHTML = Number(atual) - Number(idano.value);
+      }
     </script>
-</body>
+  </body>
 </html>
