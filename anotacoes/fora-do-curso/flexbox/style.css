@@ -38,7 +38,7 @@ h1, h2, p {
     width: 100px;
     height: 100px;
     flex-grow: 1; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
-    flex-shrink: 1; /* Seu valor padrão é 1, ou seja, já tem a habilidade de diminuir, aplicando o valor 2 essa habilidade aumenta, podendo diminuir mais do  que os outros. */
+    flex-shrink: 2; /* Seu valor padrão é 1, ou seja, já tem a habilidade de diminuir, aplicando o valor 2 essa habilidade aumenta, podendo diminuir mais do  que os outros. */
     flex-basis: auto; /* Defina a largura base do elemento caso o main axis seja row, ou a altura base do elemento caso o main axis seja column; além disso colocando auto como padrão, o conteúdo dentro será usado no flex-grow */
     flex: 1 1 auto; /* Shorthand para flex-grow/flex-shrink/flex-basis */
 }

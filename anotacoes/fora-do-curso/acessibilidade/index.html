@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acessibilidade na Web</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
   </head>
   <body>
     <h1>Acessibilidade na Web</h1>
 
-    <h2>Ultilizando &lt;tabindex&gt;</h2>
+    <h2>Ultilizando [tabindex]</h2>
 
     <form action="cadastro.php" method="get">
       <div>
         <label for="id-email">Email</label>
-        <input type="email" name="email" id="id-email" tabindex="0"/>
+        <input type="email" name="email" id="id-email" tabindex="0" />
       </div>
 
       <div>
         <label for="id-senha">Senha</label>
-        <input type="password" name="senha" id="id-senha" tabindex="0"/>
+        <input type="password" name="senha" id="id-senha" tabindex="0" />
       </div>
 
       <div>
@@ -27,6 +32,17 @@
       </div>
     </form>
 
-    <p></p>
+    <h2>Ultilizando [aria-label]</h2>
+    <p>
+      Aria label é ultilizada para rotular um elemento que não contém texto
+      nenhum para ser descrito como por exemplo um ícone de menu.
+      <mark>É principalmente usado para Acessibilidade</mark>
+    </p>
+
+    <h2>Aria labeledby</h2>
+    <p>Ultilizado para referenciar um título adequando para o elemento através de 1 ou mais IDs apenas.</p>
+
+    <h2>Aria describedby</h2>
+    <p>Ultilizado para referenciar uma descrição adequada para o elemento através de 1 ou mais IDs apenas.</p>
   </body>
 </html>

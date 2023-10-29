@@ -1,34 +1,37 @@
 @charset "UTF-8";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, h2, p, a {
-    margin: 30px 10px;
+h1,
+h2,
+p,
+a {
+  margin: 30px 10px;
 }
 
 .container {
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(247, 247, 141);
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(8, 50px);
-    gap: 10px;
-    justify-content: space-around; /*Alinha o conteúdo horizontalmente*/
-    justify-items: stretch; /* Alinha o item horizontalmente*/
-    align-items: center; /* Alinha o item verticalmente*/
-    align-content: end; /*Alinha o conteúdo verticalmente*/
-    /* grid-template-columns: 1fr 4fr; /* Colunas do grid-template */
-    /* grid-template-rows: 1fr 8fr 1fr; Linhas do grid-template */
-    /* grid-template-areas: 
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(247, 247, 141);
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 10px;
+  justify-content: space-around; /*Alinha o conteúdo horizontalmente*/
+  justify-items: stretch; /* Alinha o item horizontalmente*/
+  align-items: center; /* Alinha o item verticalmente*/
+  align-content: end; /*Alinha o conteúdo verticalmente*/
+  /* grid-template-columns: 1fr 4fr; /* Colunas do grid-template */
+  /* grid-template-rows: 1fr 8fr 1fr; Linhas do grid-template */
+  /* grid-template-areas: 
     "i1 i1"
     "i2 i3"
     "i4 i4"
@@ -36,23 +39,23 @@ h1, h2, p, a {
 }
 
 .item {
-    background-color: rgb(198, 125, 191);
+  background-color: rgb(198, 125, 191);
 }
 
 .item:nth-child(1) {
-    justify-self: start; /* Alinha um item sozinho horizontalmente */
-    align-self: stretch; /* Alinha um item sozinho verticalmente */
-    /* grid-area: i1; */
+  justify-self: start; /* Alinha um item sozinho horizontalmente */
+  align-self: stretch; /* Alinha um item sozinho verticalmente */
+  /* grid-area: i1; */
 }
 
 .item:nth-child(2) {
-    /* grid-area: i2; */
+  /* grid-area: i2; */
 }
 
 .item:nth-child(3) {
-    /* grid-area: i3; */
+  /* grid-area: i3; */
 }
 
 .item:nth-child(4) {
-    /* grid-area: i4; nomeia o item, para ser ultilizado em um template grid-template-areas */
+  /* grid-area: i4; nomeia o item, para ser ultilizado em um template grid-template-areas */
 }

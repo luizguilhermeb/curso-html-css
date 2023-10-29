@@ -22,7 +22,7 @@ h1, h2, p, a {
     grid-template-rows: none; /* Alinha o tamanho de cada linha, o valor auto é o tamanho padrão do elemento */
     grid-auto-rows: auto; /* Dá um tamanho para as linhas que ainda não foram especificadas, o mesmo serve para grid-auto-columns */
     padding: 10px;
-    grid-gap: 10px; /* espaçamento entre itens-filho */
+    gap: 10px; /* espaçamento entre itens-filho */
 }
 
 .item {
@@ -35,5 +35,5 @@ h1, h2, p, a {
     grid-column-start: 1;
     grid-column-end: 3; */
     grid-row: 1/3;
-    grid-column: 1 / span 2; /* Especifica onde um item deve iniciar e terminar como se fosse uma tabela, a medida usada é pela linha virtual (line) */ /* O span é usado para expandir */
+    grid-column: 1 / 10; /* Especifica onde um item deve iniciar e terminar como se fosse uma tabela, a medida usada é pela linha virtual (line) */ /* O span é usado para expandir */
 }

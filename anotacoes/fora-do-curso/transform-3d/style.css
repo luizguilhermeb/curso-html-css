@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#card-container {
+    /* quanto menor perspectiva maior profundidade, e quanto menor perspectiva maior profundidade */
+    perspective: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 4rem;
+    width: 400px;
+}
+
+.card {
+    background-color: brown;
+    color: white;
+    padding: 1rem;
+    transition: 1s;
+}
+
+.card:nth-child(1):hover {
+    /* muda de posição translate(x, y) */
+    transform: translate(-10px, -10px); 
+}
+
+.card:nth-child(2):hover {
+    /* aumenta o tamanho proporcionalmente scale(x, y) ou scale(xy) */
+    transform: scale(1.5, 1.25);
+}
+
+.card:nth-child(3):hover {
+    /* rotação 2D, porém também há rotateX() rotateY() rotateZ() que aplicam 3D, mas não podem ser usados juntos, para usa-los juntos use rotate3d() */
+    transform: rotate(45deg);
+}
+
+.card:nth-child(4):hover {
+    /* rotação 3D rotate3d(x, y, z, valor referancial)*/
+    transform: rotate3d(0, 1, 1, 45deg);
+}
+
+.card:nth-child(5):hover {
+    /* inclinação do objeto */
+    transform: skew(-25deg, -25deg);
+}
+
+.card:nth-child(6):hover {
+    /* especifica o ponto central de transformação */
+    transform-origin: right center;
+    transform: rotate(360deg);
+}
+
+.card:nth-child(7):hover {
+    transform: rotateX(70deg);
+}
