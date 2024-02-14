@@ -5,31 +5,36 @@ body {
 }
 
 div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     background-color: rgb(80, 241, 48);
     width: 400px;
     height: 400px;
 }
 
-@keyframes brilho{
-    95% {
-        color: black;
+@keyframes animacao{
+    0% {
+        background-color: #ffdd00;
+    }
+    30% {
+        bottom: 30px;
+    }
+
+    75% {
+        bottom: -30px;
     }
 
     100% {
-        color: white;
+        bottom: 0px;
+        background-color: green;
     }
 }
 
 div a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 0px;
 
     text-decoration: none;
     color: black;
@@ -39,5 +44,7 @@ div a {
     text-transform: uppercase;
     font-weight: bold;
 
-    animation: brilho 3s infinite;
+    animation: animacao 2s linear;
+    animation-fill-mode: both;
+    animation-delay: 3s;
 }

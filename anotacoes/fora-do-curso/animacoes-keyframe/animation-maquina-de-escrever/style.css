@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-right: 8px solid #2fff00;
+    color: #2fff00;
+    line-height: 23px;
+    width: 38ch;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: writing 4s steps(38) infinite alternate, blinking 1s steps(1) infinite;
+}
+
+@keyframes writing {
+    from {
+        width: 0ch;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-right-color: #ffffff00;
+    }
+}
