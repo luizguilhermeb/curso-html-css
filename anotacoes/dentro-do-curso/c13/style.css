@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(45deg, #6AE187, #C3F5BA); /*Explicação sobre degradê com porcentagem:Colocando 20% em amarelo ele não ocupa 20% da tela mas sim 80%. O que ocorre é que o inicio do amarelo puro vai se dar na posição de 20% to right, e ele vai até o final da tela ocupando basicamente 80%.*/
     background-attachment: fixed; /*Deixa o degradê fixo no fundo (solução para site cortado)*/
 }
