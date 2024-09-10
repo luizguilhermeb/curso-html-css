@@ -16,6 +16,7 @@ h1, h2, p {
 }
 
 .container {
+    height: 70rem;
     background-color: antiquewhite;
     padding: 10px;
 
@@ -26,8 +27,8 @@ h1, h2, p {
 
     justify-content: center; /* Justificação do Conteúdo Principal*/
     
-    align-items: center; /* Justificação do Conteúdo Perpendicular (Por Linha)*/ 
-    align-content: center; /* Justificação do conteúdo Perpendicular (Decidir se os elementos vão ficar espremidos, espalhados ou para algum lado) */
+    align-items: start; /* Justificação do Conteúdo Perpendicular (Por Linha)*/
+    align-content: none; /* Justificação do conteúdo Perpendicular (Decidir se os elementos vão ficar espremidos, espalhados ou para algum lado) */
 
     gap: 10px 20px; /* espaçamento  interno de cada item */
 }
@@ -40,7 +41,7 @@ h1, h2, p {
     flex-grow: 1; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
     flex-shrink: 2; /* Seu valor padrão é 1, ou seja, já tem a habilidade de diminuir, aplicando o valor 2 essa habilidade aumenta, podendo diminuir mais do  que os outros. */
     flex-basis: auto; /* Defina a largura base do elemento caso o main axis seja row, ou a altura base do elemento caso o main axis seja column; além disso colocando auto como padrão, o conteúdo dentro será usado no flex-grow */
-    flex: 1 1 auto; /* Shorthand para flex-grow/flex-shrink/flex-basis */
+    flex: 0 1 auto; /* Shorthand para flex-grow/flex-shrink/flex-basis */
 }
 
 .bloco:nth-child(even) {
@@ -49,7 +50,7 @@ h1, h2, p {
 
 .bloco:nth-child(23) {
     flex-grow: 8; /*Seu valor padrão é 0, colocando 1 torna possível que os itens cresçam, aumentando esse valor, torna possível que uns cresçam mais sobre os outros*/
-    align-self: flex-end; /* o atributo align-content se sobrepõe ao align-self que serve para mudar individualmente a posição no eixo perpendicular. */
+    align-self: end; /* o atributo align-content se sobrepõe ao align-self que serve para mudar individualmente a posição no eixo perpendicular. */
 }
 
 
